@@ -23,6 +23,7 @@ public class MainApplicationController {
     @FXML
     private Button student;
 
+
     // admin button clicks opens the admin-landing-view which location is "src/main/resources/com/lms/lmsdesktop/admin/admin-landing-view.fxml" and set a new scene
 //    @FXML
 //    void handleAdminButtonClick(ActionEvent event) {
