@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="893.0" prefWidth="1268.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.student.LmsLandingController">
+    <children>
+        <ImageView fx:id="userImage" fitHeight="127.0" fitWidth="109.0" layoutX="28.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="C:\\Users\\fahim\\IdeaProjects\\LMS_Desktop\\src\\img\\FBA.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="152.0" layoutY="78.0" text="Welcome!">
+            <font>
+                <Font name="System Bold" size="34.0" />
+            </font>
+        </Label>
+        <Label layoutX="368.0" layoutY="80.0" text="Md. Fahim Bin Amin - 011201158">
+            <font>
+                <Font size="31.0" />
+            </font>
+        </Label>
+        <Line endX="1125.0" layoutX="123.0" layoutY="228.0" startX="-100.0" />
+        <Label layoutX="23.0" layoutY="244.0" text="Recently Accessed Course">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Line endX="1135.0" layoutX="115.0" layoutY="424.0" startX="-100.0" />
+        <Label layoutX="23.0" layoutY="445.0" text="Course Overview">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Line endX="-100.0" endY="304.0" layoutX="735.0" layoutY="459.0" startX="-100.0" />
+        <Label layoutX="15.0" layoutY="793.0" text="Stay in touch!" textFill="#da9535" />
+        <Label layoutX="35.0" layoutY="816.0" text="http://uiu.ac.bd" textFill="#123fd0" />
+        <Label layoutX="37.0" layoutY="843.0" text="cits@uiu.ac.bd" textFill="#190bda" />
+        <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="15.0" layoutY="817.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../img/website-logo.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="15.0" layoutY="846.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../img/mail-logo.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
