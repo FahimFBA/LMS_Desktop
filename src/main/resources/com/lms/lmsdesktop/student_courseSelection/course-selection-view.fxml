@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="693.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.lms.lmsdesktop.student_courseSelection.CourseSelectionController">
+   <children>
+      <Label layoutX="408.0" layoutY="53.0" text="Course Selection Tab">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="115.0" text="Student's Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="151.0" text="Student's ID">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="191.0" text="Student's Batch">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="232.0" text="Trimester">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="119.0" text="Label" />
+      <Label layoutX="248.0" layoutY="155.0" text="Label" />
+      <Label layoutX="248.0" layoutY="195.0" text="Label" />
+      <Label layoutX="248.0" layoutY="236.0" text="Label" />
+      <TableView layoutX="122.0" layoutY="347.0" prefHeight="300.0" prefWidth="877.0">
+        <columns>
+          <TableColumn editable="false" prefWidth="150.0" text="Course Name" />
+          <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+            <TableColumn editable="false" prefWidth="150.0" text="Course Code" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+            <TableColumn editable="false" prefWidth="150.0" text="Credits" />
+            <TableColumn editable="false" prefWidth="150.0" text="Section" />
+            <TableColumn editable="false" prefWidth="150.0" text="Registration Status" />
+            <TableColumn editable="false" prefWidth="150.0" text="Remarks" />
+        </columns>
+      </TableView>
+      <Line endX="146.0" layoutX="537.0" layoutY="93.0" startX="-129.0" />
+      <Label layoutX="89.0" layoutY="266.0" text="Completed Credits">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="270.0" text="Label" />
+   </children>
+</AnchorPane>

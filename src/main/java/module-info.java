@@ -11,5 +11,7 @@ module com.lms.lmsdesktop {
     exports com.lms.lmsdesktop.faculty;
     opens com.lms.lmsdesktop.admin to javafx.fxml;
     exports com.lms.lmsdesktop.admin;
+    opens com.lms.lmsdesktop.student_courseSelection to javafx.fxml;
+    exports com.lms.lmsdesktop.student_courseSelection;
 
 }
