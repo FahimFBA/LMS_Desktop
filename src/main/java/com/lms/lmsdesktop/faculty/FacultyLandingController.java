@@ -1,4 +1,4 @@
-package com.lms.lmsdesktop;
+package com.lms.lmsdesktop.faculty;
 
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
