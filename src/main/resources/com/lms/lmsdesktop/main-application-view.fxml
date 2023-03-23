@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="635.0" fitWidth="941.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="C:\Users\fahim\Documents\LMSdesktop\src\img\main.jpg" />
+            <Image url="@main.jpg" />
          </image>
       </ImageView>
       <Label layoutX="296.0" layoutY="14.0" text="LMS Desktop">
