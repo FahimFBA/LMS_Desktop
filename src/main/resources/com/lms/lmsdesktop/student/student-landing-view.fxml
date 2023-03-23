@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="693.0" fitWidth="984.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="C:\Users\fahim\Documents\LMSdesktop\src\img\student_landing.jpg" />
+            <Image url="@student_landing.jpg" />
          </image>
       </ImageView>
       <Label layoutX="622.0" layoutY="35.0" prefWidth="348.0" text="Student Portal" textFill="#0d0000">
