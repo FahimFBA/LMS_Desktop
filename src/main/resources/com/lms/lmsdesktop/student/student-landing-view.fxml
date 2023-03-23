@@ -23,16 +23,19 @@
       </Label>
       <Label layoutX="622.0" layoutY="268.0" text="User ID">
          <font>
-            <Font size="28.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
       </Label>
       <Label layoutX="622.0" layoutY="331.0" text="Password">
          <font>
-            <Font size="28.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
       </Label>
       <TextField layoutX="763.0" layoutY="268.0" prefHeight="40.0" prefWidth="176.0" />
       <PasswordField layoutX="763.0" layoutY="331.0" prefHeight="40.0" prefWidth="176.0" />
       <Button fx:id="home" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#home" text="Home" />
+      <Button layoutX="105.0" layoutY="14.0" mnemonicParsing="false" text="All Course " />
+      <Button layoutX="210.0" layoutY="14.0" mnemonicParsing="false" text="Course Search" />
+      <Button layoutX="824.0" layoutY="421.0" mnemonicParsing="false" text="Submit" />
    </children>
 </AnchorPane>
