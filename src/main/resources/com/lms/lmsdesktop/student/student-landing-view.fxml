@@ -4,11 +4,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.student.StudentLandingController">
@@ -35,17 +33,6 @@
       </Label>
       <TextField layoutX="763.0" layoutY="268.0" prefHeight="40.0" prefWidth="176.0" />
       <PasswordField layoutX="763.0" layoutY="331.0" prefHeight="40.0" prefWidth="176.0" />
-      <Button fx:id="mainPage" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#mainPage" prefHeight="25.0" prefWidth="54.0" text="LMS">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-         <effect>
-            <DropShadow>
-               <color>
-                  <Color red="0.7763158082962036" green="0.1832967847585678" blue="0.1832967847585678" />
-               </color>
-            </DropShadow>
-         </effect>
-      </Button>
+      <Button fx:id="home" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#home" text="Home" />
    </children>
 </AnchorPane>
