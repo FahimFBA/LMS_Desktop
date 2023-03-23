@@ -42,12 +42,12 @@
         <Label layoutX="37.0" layoutY="843.0" text="cits@uiu.ac.bd" textFill="#190bda" />
         <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="15.0" layoutY="817.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../../../img/website-logo.png" />
+                <Image url="@website-logo.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="15.0" layoutY="846.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../../../img/mail-logo.png" />
+                <Image url="@mail-logo.png" />
             </image>
         </ImageView>
     </children>
