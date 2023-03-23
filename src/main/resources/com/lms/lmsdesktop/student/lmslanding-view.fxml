@@ -11,7 +11,7 @@
     <children>
         <ImageView fx:id="userImage" fitHeight="127.0" fitWidth="109.0" layoutX="28.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="C:\\Users\\fahim\\IdeaProjects\\LMS_Desktop\\src\\img\\FBA.jpg" />
+                <Image url="@FBA.jpg" />
             </image>
         </ImageView>
         <Label layoutX="152.0" layoutY="78.0" text="Welcome!">
