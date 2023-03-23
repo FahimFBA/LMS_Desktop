@@ -14,7 +14,7 @@
     <children>
         <ImageView fx:id="image" fitHeight="749.0" fitWidth="982.0" opacity="0.44" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="C:\Users\Ipty\IdeaProjects\LMS_Desktop\src\img\Project.jpg" />
+                <Image url="@Project.jpg" />
             </image>
         </ImageView>
         <Text layoutX="331.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="140.13671875">
