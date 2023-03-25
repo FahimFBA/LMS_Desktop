@@ -59,4 +59,26 @@ public class StudentLandingController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    private Button signUp;
+
+    public void signUp(ActionEvent event) throws IOException {
+
+        // Create a new FXMLLoader object by passing the path of the FXML file as a parameter to the constructor
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/lms/lmsdesktop/student/student-sign-up-view.fxml"));
+
+        // Use the load() method of the FXMLLoader object to load the FXML file and create the corresponding UI component
+        Parent root = loader.load();
+
+        // Create a new Scene object with the loaded UI component
+        Scene scene = new Scene(root);
+
+        // Get the current stage (window)
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // Set the new scene to the stage and show it
+        stage.setScene(scene);
+        stage.show();
+    }
 }

@@ -37,5 +37,15 @@
       <Button layoutX="105.0" layoutY="14.0" mnemonicParsing="false" text="All Course " />
       <Button layoutX="210.0" layoutY="14.0" mnemonicParsing="false" text="Course Search" />
       <Button layoutX="824.0" layoutY="421.0" mnemonicParsing="false" text="Submit" />
+      <Label layoutX="582.0" layoutY="524.0" text="Don't have an account?">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="signUp" layoutX="830.0" layoutY="521.0" mnemonicParsing="false" onAction="#signUp" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign Up!">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
