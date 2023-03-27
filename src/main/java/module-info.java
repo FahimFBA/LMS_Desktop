@@ -1,6 +1,7 @@
 module com.lms.lmsdesktop {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens com.lms.lmsdesktop to javafx.fxml;
