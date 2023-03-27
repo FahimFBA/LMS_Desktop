@@ -38,7 +38,7 @@ public class SignUpController {
         int student_id = Integer.parseInt(student_id_string);
         String student_password = password.getText();
         String student_retype_password = retype_password.getText();
-        String sqlFilePath = "/resources/student_signup.sql";
+        String sqlFilePath = "/database/student_signup.sql";
 
 
         try {
