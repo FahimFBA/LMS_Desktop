@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.student.SignUpController">
+   <children>
+      <AnchorPane prefHeight="560.0" prefWidth="256.0" />
+      <AnchorPane prefHeight="560.0" prefWidth="570.0" style="-fx-background-color: #e675b9;">
+         <children>
+            <Label layoutX="189.0" layoutY="56.0" text="Student Sign Up!" underline="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="229.0" text="Student's Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="288.0" text="Student's ID">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="174.0" text="Student's email ID">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="354.0" text="Student's Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email" layoutX="297.0" layoutY="175.0" prefHeight="25.0" prefWidth="225.0" promptText="Enter email ID" />
+            <TextField fx:id="name" layoutX="297.0" layoutY="230.0" prefHeight="25.0" prefWidth="225.0" promptText="Enter full name" />
+            <TextField fx:id="student_id" layoutX="297.0" layoutY="289.0" prefHeight="25.0" prefWidth="225.0" promptText="Enter ID without the starting 0" />
+            <PasswordField fx:id="password" layoutX="297.0" layoutY="355.0" prefHeight="25.0" prefWidth="225.0" promptText="Enter a strong password" />
+            <PasswordField fx:id="retype_password" layoutX="297.0" layoutY="414.0" prefHeight="25.0" prefWidth="225.0" promptText="Retype the previously used password" />
+            <Label layoutX="83.0" layoutY="413.0" text="Retype Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="SignMeUp" layoutX="243.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleSignUp" style="-fx-background-color: #46e8d2; -fx-cursor: hand;" text="Sign me Up!">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
