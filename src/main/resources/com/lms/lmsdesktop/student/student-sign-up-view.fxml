@@ -40,7 +40,7 @@
             </Label>
             <TextField fx:id="email" layoutX="297.0" layoutY="175.0" prefHeight="25.0" prefWidth="225.0" promptText="Enter email ID" />
             <TextField fx:id="name" layoutX="297.0" layoutY="230.0" prefHeight="25.0" prefWidth="225.0" promptText="Enter full name" />
-            <TextField fx:id="student_id" layoutX="297.0" layoutY="289.0" prefHeight="25.0" prefWidth="225.0" promptText="Enter ID " />
+            <TextField fx:id="student_id" layoutX="297.0" layoutY="289.0" prefHeight="25.0" prefWidth="225.0" promptText="Enter ID without the starting 0" />
             <PasswordField fx:id="password" layoutX="297.0" layoutY="355.0" prefHeight="25.0" prefWidth="225.0" promptText="Enter a strong password" />
             <PasswordField fx:id="retype_password" layoutX="297.0" layoutY="414.0" prefHeight="25.0" prefWidth="225.0" promptText="Retype the previously used password" />
             <Label layoutX="83.0" layoutY="413.0" text="Retype Password">
