@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.lms.lmsdesktop.quiz.QuizPageController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="861.0" prefWidth="986.0" style="-fx-background-color: #b0e8db;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.quiz.QuizPageController">
+   <children>
+      <Label layoutX="449.0" layoutY="21.0" text="Quiz">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Label>
+      <ScrollBar layoutX="965.0" layoutY="89.0" min="25.0" orientation="VERTICAL" prefHeight="740.0" prefWidth="14.0" />
+      <Label layoutX="88.0" layoutY="142.0" text="Questions - ">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="212.0" layoutY="142.0" text="1">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="88.0" layoutY="184.0" prefHeight="164.0" prefWidth="843.0" />
+      <RadioButton layoutX="88.0" layoutY="384.0" mnemonicParsing="false" text="RadioButton">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="88.0" layoutY="431.0" mnemonicParsing="false" text="RadioButton">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="831.0" layoutY="745.0" mnemonicParsing="false" text="Next">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="101.0" layoutY="745.0" mnemonicParsing="false" text="Clear All">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
