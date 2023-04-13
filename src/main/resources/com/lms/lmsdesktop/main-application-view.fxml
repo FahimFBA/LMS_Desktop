@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="611.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.MainApplicationController">
    <children>
-      <ImageView fitHeight="754.0" fitWidth="1132.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="722.0" fitWidth="1100.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@main.jpg" />
          </image>
@@ -19,29 +19,32 @@
             <Font name="Comic Sans MS Bold" size="64.0" />
          </font>
       </Label>
-      <Button fx:id="admin" layoutX="992.0" layoutY="545.0" mnemonicParsing="false" onAction="#admin" prefHeight="25.0" prefWidth="88.0" style="-fx-alignment: center; -fx-cursor: hand; -fx-border-color: transparent; -fx-border-width: 0; -fx-background-color: #dcf3fb;" text="Admin">
+      <Button fx:id="admin" layoutX="911.0" layoutY="556.0" mnemonicParsing="false" onAction="#admin" prefHeight="25.0" prefWidth="88.0" style="-fx-alignment: center; -fx-cursor: hand; -fx-border-color: transparent; -fx-border-width: 0; -fx-background-color: #dcf3fb;" text="Admin">
          <font>
             <Font name="Consolas Bold" size="14.0" />
-         </font></Button>
-      <Button fx:id="faculty" layoutX="992.0" layoutY="486.0" mnemonicParsing="false" onAction="#faculty" prefHeight="25.0" prefWidth="88.0" style="-fx-alignment: center; -fx-cursor: hand; -fx-border-color: transparent; -fx-border-width: 0; -fx-background-color: #dcf3fb;" text="Faculty">
+         </font>
+      </Button>
+      <Button fx:id="faculty" layoutX="911.0" layoutY="497.0" mnemonicParsing="false" onAction="#faculty" prefHeight="25.0" prefWidth="88.0" style="-fx-alignment: center; -fx-cursor: hand; -fx-border-color: transparent; -fx-border-width: 0; -fx-background-color: #dcf3fb;" text="Faculty">
          <font>
             <Font name="Consolas Bold" size="14.0" />
-         </font></Button>
-      <Button fx:id="student" layoutX="992.0" layoutY="424.0" mnemonicParsing="false" onAction="#student" prefHeight="25.0" prefWidth="88.0" style="-fx-alignment: center; -fx-cursor: hand; -fx-border-color: transparent; -fx-border-width: 0; -fx-background-color: #dcf3fb;" text="Student">
+         </font>
+      </Button>
+      <Button fx:id="student" layoutX="911.0" layoutY="435.0" mnemonicParsing="false" onAction="#student" prefHeight="25.0" prefWidth="88.0" style="-fx-alignment: center; -fx-cursor: hand; -fx-border-color: transparent; -fx-border-width: 0; -fx-background-color: #dcf3fb;" text="Student">
          <font>
             <Font name="Consolas Bold" size="14.0" />
-         </font></Button>
-      <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="951.0" layoutY="538.0" pickOnBounds="true" preserveRatio="true">
+         </font>
+      </Button>
+      <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="870.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@admin.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="951.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="870.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@student-in-landing.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="951.0" layoutY="478.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="870.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@faculty.png" />
          </image>
