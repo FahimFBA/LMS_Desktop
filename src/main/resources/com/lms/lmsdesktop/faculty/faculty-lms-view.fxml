@@ -71,7 +71,10 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-link-94.png" />
+                                 </image></ImageView>
                            </graphic>
                         </JFXButton>
                         <JFXButton prefHeight="50.0" prefWidth="187.0" text="Course Search" textFill="WHITE">
@@ -79,7 +82,10 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-search-1500.png" />
+                                 </image></ImageView>
                            </graphic>
                         </JFXButton>
                         <JFXButton prefHeight="50.0" prefWidth="139.0" text="Calendar" textFill="WHITE">
@@ -87,7 +93,10 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-calendar-94.png" />
+                                 </image></ImageView>
                            </graphic>
                         </JFXButton>
                         <JFXButton prefHeight="50.0" prefWidth="207.0" text="Private Files" textFill="WHITE">
@@ -95,7 +104,10 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-document-94.png" />
+                                 </image></ImageView>
                            </graphic>
                         </JFXButton>
                         <JFXButton prefHeight="50.0" prefWidth="142.0" text="Settings" textFill="WHITE">
@@ -103,7 +115,10 @@
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-gear-94.png" />
+                                 </image></ImageView>
                            </graphic>
                         </JFXButton>
                      </children>
@@ -121,7 +136,7 @@
                <children>
                   <VBox layoutX="39.0" layoutY="181.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #e28743;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                      <children>
-                        <JFXButton prefHeight="52.0" prefWidth="177.0" text="Dashboard" textFill="WHITE">
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" text="Dashboard" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -132,7 +147,7 @@
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton prefHeight="52.0" prefWidth="177.0" text="Site Home" textFill="WHITE">
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" text="Site Home" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -143,52 +158,70 @@
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton prefHeight="52.0" prefWidth="177.0" text="UCAM" textFill="WHITE">
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" text="UCAM" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-link-94.png" />
+                                 </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton prefHeight="52.0" prefWidth="177.0" text="Course Search" textFill="WHITE">
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" text="Course Search" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-search-1500.png" />
+                                 </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton prefHeight="52.0" prefWidth="177.0" text="Calendar" textFill="WHITE">
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" text="Calendar" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-calendar-94.png" />
+                                 </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton prefHeight="52.0" prefWidth="177.0" text="Private Files" textFill="WHITE">
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" text="Private Files" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-document-94.png" />
+                                 </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton prefHeight="52.0" prefWidth="177.0" text="Settings" textFill="WHITE">
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" text="Settings" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-gear-94.png" />
+                                 </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton prefHeight="52.0" prefWidth="177.0" text="Contact CITS" textFill="WHITE">
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" text="Contact CITS" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/icons8-phone-94.png" />
+                                 </image></ImageView>
                            </graphic>
                         </JFXButton>
                      </children>
