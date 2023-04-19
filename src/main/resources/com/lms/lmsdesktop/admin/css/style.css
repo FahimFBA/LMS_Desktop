@@ -1,0 +1,5 @@
+.bg{
+    -fx-background-image: url("file:src/main/resources/com/lms/lmsdesktop/admin/img/admin_landing.jpg");
+    -fx-background-size: cover;
+
+}

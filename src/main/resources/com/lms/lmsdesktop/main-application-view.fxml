@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -8,10 +9,13 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="611.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.MainApplicationController">
+   <stylesheets>
+      <URL value="@css/style.css" />
+   </stylesheets>
    <children>
-      <ImageView fitHeight="722.0" fitWidth="1100.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="722.0" fitWidth="1100.0" pickOnBounds="true" preserveRatio="true" styleClass="coverimage">
          <image>
-            <Image url="@main.jpg" />
+            <Image url="@img/main.jpg" />
          </image>
       </ImageView>
       <Label layoutX="359.0" layoutY="22.0" text="LMS Desktop">
@@ -36,17 +40,17 @@
       </Button>
       <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="870.0" layoutY="549.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@admin.png" />
+            <Image url="@img/admin.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="870.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@student-in-landing.png" />
+            <Image url="@img/student-in-landing.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="870.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@faculty.png" />
+            <Image url="@img/faculty.png" />
          </image>
       </ImageView>
    </children>
