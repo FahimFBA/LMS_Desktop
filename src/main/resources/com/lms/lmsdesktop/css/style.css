@@ -1,0 +1,4 @@
+.bg {
+    background-image: url("file:src/main/resources/com/lms/lmsdesktop/img/main.jpg");
+    background-size: cover;
+}
