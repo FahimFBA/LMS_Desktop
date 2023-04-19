@@ -1,0 +1,4 @@
+.background{
+    -fx-background-image: url("admin_landing.jpg");
+    -fx-background-size: cover;
+}

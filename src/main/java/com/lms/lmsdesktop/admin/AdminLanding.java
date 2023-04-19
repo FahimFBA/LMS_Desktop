@@ -10,20 +10,33 @@ import java.io.IOException;
 import java.net.URL;
 
 public class AdminLanding extends Application {
-    public static void main(String[] args) {
-        launch(args);
-    }
 
     @Override
     public void start(Stage primaryStage) throws IOException {
         // Load the FXML file from the specified path
         URL fxmlUrl = getClass().getResource("admin-landing-view.fxml");
-        Parent root = FXMLLoader.load(fxmlUrl);
+        if (fxmlUrl == null) {
+            // Handle error gracefully
+            throw new IOException("FXML file not found");
+        }
+
+        FXMLLoader loader = new FXMLLoader(fxmlUrl);
+        Parent root = loader.load();
 
         // Set up the scene and show the stage
         Scene scene = new Scene(root);
+
+        // Add the CSS file to the scene
+        URL cssUrl = getClass().getResource("css/AdminLanding.css");
+        scene.getStylesheets().add(cssUrl.toExternalForm());
+
         primaryStage.setTitle("Admin Homepage");
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+
+    public static void main(String[] args) {
+        launch();
     }
 }
