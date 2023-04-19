@@ -4,31 +4,24 @@ A desktop application that lets the faculties, students and admin to interact wi
 
 ## Features
 
-- Login
-- Register
-- Add Course
-- Add Student
-- Add Teacher
-- Add Assignment
-- Add Quiz
-- Add Question
-- Add Answer and Check them
-- Add Result
-- Add Attendance
-- Add Notice
-- Add Event
-- Add Message
-- Add Feedback
-- Add Profile
-- Add Settings
-- Add Faculty
-- Push notification
+- [ ] Admin, Faculty & Student Login
+- [ ] Admin can add, edit, delete faculties and students
+- [ ] Faculty can add, edit, delete courses and students
+- [ ] Student can view courses and enroll in courses
+- [ ] Faculty can add tasks and students can submit tasks
+- [ ] Faculty can add grades and students can view grades
+- [ ] Faculty can create Quiz and students can attempt Quiz
+- [ ] The quiz includes separate timer for each question
+- [ ] Faculty & Student can view their profile
+- [ ] Faculty & Student can change their password and profile picture
+- [ ] The quiz includes code editor for programming questions
+- [ ] The quiz has code blocks that can run the code and show the output
 
 
 ## Screenshots
 
 ## Team Members
 
-- [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader & Backend Developer
-- [Israt Jahan Khan](https://github.com/IsratIJK) - Frontend Developer
-- [Sifat Ullah Adnan](https://github.com/SifatAdnan9) - Organizer & Frontend Developer
+- [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
+- [Israt Jahan Khan](https://github.com/IsratIJK)
+- [Sifat Ullah Adnan](https://github.com/SifatAdnan9)
