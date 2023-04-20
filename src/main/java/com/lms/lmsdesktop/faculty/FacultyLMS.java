@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,16 +15,22 @@ public class FacultyLMS extends Application {
         launch(args);
     }
 
+    double x,y = 0;
     @Override
-    public void start(Stage primaryStage) throws IOException {
-        // Load the FXML file from the specified path
-        URL fxmlUrl = getClass().getResource("faculty-lms-view.fxml");
-        Parent root = FXMLLoader.load(fxmlUrl);
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("faculty-lms-view.fxml"));
 
-        // Set up the scene and show the stage
-        Scene scene = new Scene(root);
-        primaryStage.setTitle("Faculty LMS");
-        primaryStage.setScene(scene);
+        root.setOnMousePressed(event -> {
+            x = event.getSceneX();
+            y = event.getSceneY();
+        });
+
+        root.setOnMouseDragged(event -> {
+            primaryStage.setX(event.getScreenX() - x);
+            primaryStage.setY(event.getScreenY() - y);
+        });
+
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 }
