@@ -25,6 +25,16 @@
             <artifactId>javafx-fxml</artifactId>
             <version>19</version>
         </dependency>
+<!--        Mysql dependency. Remove it if problems occur-->
+<!--        Command if needed: `mvn install:install-file -Dfile=lib/mysql-connector-j-8.0.32.jar -DgroupId=mysql \-->
+<!--        -DartifactId=mysql-connector-java -Dversion=8.0.32 -Dpackaging=jar`-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.32</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/mysql-connector-j-8.0.32.jar</systemPath>
+        </dependency>
         <dependency>
             <groupId>com.jfoenix</groupId>
             <artifactId>jfoenix</artifactId>
