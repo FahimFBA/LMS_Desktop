@@ -1,43 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.admin.AdminLandingController">
+<AnchorPane prefHeight="980.0" prefWidth="1850.0" styleClass="background" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.admin.AdminLandingController">
+   <stylesheets>
+      <URL value="@css/AdminLanding.css" />
+    </stylesheets>
    <children>
       <ImageView fitHeight="719.0" fitWidth="1044.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@admin_landing.jpg" />
-         </image></ImageView>
-      <Label layoutX="14.0" layoutY="14.0" text="Admin Portal">
+<!--            <Image url="@css/admin_landing.jpg" />-->
+         </image>
+      </ImageView>
+      <Label layoutX="819.0" layoutY="272.0" text="Admin Portal">
          <font>
-            <Font name="System Bold" size="37.0" />
+            <Font name="System Bold" size="72.0" />
          </font>
       </Label>
-      <Label layoutX="562.0" layoutY="475.0" text="Username">
+      <Label layoutX="1388.0" layoutY="680.0" text="User ID">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="33.0" />
          </font>
       </Label>
-      <Label layoutX="562.0" layoutY="540.0" text="Password">
+      <Label layoutX="1388.0" layoutY="754.0" text="Password">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="33.0" />
          </font>
       </Label>
-      <TextField layoutX="746.0" layoutY="475.0" prefHeight="35.0" prefWidth="161.0" />
-      <PasswordField layoutX="746.0" layoutY="540.0" prefHeight="35.0" prefWidth="161.0" />
-      <Button fx:id="Home" layoutX="978.0" layoutY="14.0" mnemonicParsing="false" onAction="#Home" text="Home" />
-      <Button layoutX="801.0" layoutY="620.0" mnemonicParsing="false" text="Submit">
-         <effect>
-            <DropShadow />
-         </effect>
-      </Button>
+      <TextField layoutX="1572.0" layoutY="673.0" prefHeight="63.0" prefWidth="266.0">
+         <font>
+            <Font size="29.0" />
+         </font></TextField>
+      <PasswordField layoutX="1572.0" layoutY="747.0" prefHeight="63.0" prefWidth="266.0" />
+      <JFXButton fx:id="Home" layoutX="14.0" layoutY="14.0" onAction="#Home" ripplerFill="#82c77f" text="Home">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@css/icons8-home-188.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="1590.0" layoutY="843.0" ripplerFill="#62c8fc" text="Submit">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@css/icons8-paper-plane-94.png" />
+               </image></ImageView>
+         </graphic>
+      </JFXButton>
    </children>
 </AnchorPane>
