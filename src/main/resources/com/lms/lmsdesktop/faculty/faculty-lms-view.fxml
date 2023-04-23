@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -95,14 +96,14 @@
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton prefHeight="50.0" prefWidth="139.0" text="Calendar" textFill="WHITE">
+                        <JFXButton prefHeight="50.0" prefWidth="157.0" text="Calculator" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@img/icons8-calendar-94.png" />
+                                    <Image url="@css/icons8-calculator-94.png" />
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
@@ -206,14 +207,14 @@
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" styleClass="sidebarItem" text="Calendar" textFill="WHITE">
+                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" styleClass="sidebarItem" text="Calculator" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@img/icons8-calendar-94.png" />
+                                    <Image url="@css/icons8-calculator-94.png" />
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
@@ -258,7 +259,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
                <children>
-                  <GridPane layoutX="19.0" layoutY="93.0" prefHeight="659.0" prefWidth="1630.0">
+                  <GridPane layoutX="19.0" layoutY="93.0" prefHeight="659.0" prefWidth="1630.0" vgap="15.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -278,7 +279,7 @@
                               </ImageView>
                            </center>
                            <bottom>
-                              <JFXButton prefHeight="17.0" prefWidth="179.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Classroom" BorderPane.alignment="CENTER">
+                              <JFXButton prefHeight="52.0" prefWidth="187.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Classroom" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font name="Bell MT Bold" size="27.0" />
                                  </font>
@@ -294,23 +295,86 @@
                               </ImageView>
                            </center>
                            <bottom>
-                              <JFXButton style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Calendar" BorderPane.alignment="CENTER">
+                              <JFXButton prefHeight="52.0" prefWidth="187.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Calendar" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font name="Bell MT Bold" size="27.0" />
                                  </font>
                               </JFXButton>
                            </bottom>
                         </BorderPane>
-                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                        <BorderPane prefHeight="195.0" prefWidth="818.0" GridPane.rowIndex="1">
                            <center>
                               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
                                     <Image url="@css/contract.png" />
                                  </image>
+                                 <BorderPane.margin>
+                                    <Insets bottom="6.0" />
+                                 </BorderPane.margin>
                               </ImageView>
                            </center>
                            <bottom>
-                              <JFXButton style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Courses" BorderPane.alignment="CENTER">
+                              <JFXButton prefHeight="52.0" prefWidth="187.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Courses" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Bell MT Bold" size="27.0" />
+                                 </font>
+                                 <BorderPane.margin>
+                                    <Insets />
+                                 </BorderPane.margin>
+                              </JFXButton>
+                           </bottom>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <center>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@css/quiz.png" />
+                                 </image>
+                                 <BorderPane.margin>
+                                    <Insets bottom="6.0" />
+                                 </BorderPane.margin>
+                              </ImageView>
+                           </center>
+                           <bottom>
+                              <JFXButton prefHeight="52.0" prefWidth="187.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Chat" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Bell MT Bold" size="27.0" />
+                                 </font>
+                                 <BorderPane.margin>
+                                    <Insets />
+                                 </BorderPane.margin>
+                              </JFXButton>
+                           </bottom>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <center>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@css/test.png" />
+                                 </image>
+                              </ImageView>
+                           </center>
+                           <bottom>
+                              <JFXButton prefHeight="52.0" prefWidth="187.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Exam" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Bell MT Bold" size="27.0" />
+                                 </font>
+                              </JFXButton>
+                           </bottom>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <center>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@css/folder.png" />
+                                 </image>
+                              </ImageView>
+                           </center>
+                           <bottom>
+                              <JFXButton prefHeight="52.0" prefWidth="187.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Private Files" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font name="Bell MT Bold" size="27.0" />
                                  </font>
