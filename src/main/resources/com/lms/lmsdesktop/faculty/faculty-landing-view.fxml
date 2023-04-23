@@ -1,46 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="404.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.FacultyLandingController">
-    <children>
-        <ImageView fx:id="image" fitHeight="749.0" fitWidth="982.0" opacity="0.44" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@Project.jpg" />
-            </image>
-        </ImageView>
-        <Text layoutX="331.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="140.13671875">
-            <font>
-                <Font size="25.0" />
-            </font>
-        </Text>
-        <Text layoutX="331.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
-            <font>
-                <Font size="25.0" />
-            </font>
-        </Text>
-        <TextField layoutX="582.0" layoutY="281.0" prefHeight="35.0" prefWidth="192.0" promptText="Enter your username" />
-        <PasswordField layoutX="582.0" layoutY="360.0" prefHeight="35.0" prefWidth="192.0" promptText="Enter your Password" />
-        <Button layoutX="664.0" layoutY="580.0" mnemonicParsing="false" onMouseClicked="#Submit" prefHeight="25.0" prefWidth="104.0" text="Submit" />
-        <Text fx:id="invalid" fill="#fc0000" layoutX="69.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="400.0">
-            <font>
-                <Font size="16.0" />
-            </font>
-        </Text>
-        <Button layoutX="331.0" layoutY="580.0" mnemonicParsing="false" onMouseClicked="#backFac" prefHeight="25.0" prefWidth="104.0" text="Back" />
-      <Label layoutX="266.0" layoutY="77.0" text="Access To The eLMS Desktop Platform">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="980.0" prefWidth="1850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.FacultyLandingController">
+   <children>
+      <ImageView fitHeight="1012.0" fitWidth="2058.0" layoutX="-6.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@css/joanna-kosinska-1_CMoFsPfso-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="Home" buttonType="RAISED" layoutX="14.0" layoutY="14.0" onAction="#Home" text="Home">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font name="System Bold" size="38.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@css/icons8-home-375.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.490521327014218" cycleMethod="REFLECT" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6387162804603577" green="0.3454556465148926" blue="0.6973684430122375" opacity="0.8899999856948853" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+      </JFXButton>
+      <Label layoutX="1152.0" layoutY="430.0" text="User Name">
+         <font>
+            <Font name="Bell MT Bold" size="42.0" />
          </font>
       </Label>
-      <Button fx:id="Home" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Home" text="Home" />
-    </children>
+      <Label layoutX="1152.0" layoutY="577.0" text="Password">
+         <font>
+            <Font name="Bell MT Bold" size="42.0" />
+         </font>
+      </Label>
+      <TextField layoutX="1392.0" layoutY="424.0" prefHeight="75.0" prefWidth="401.0">
+         <font>
+            <Font name="Bell MT" size="35.0" />
+         </font>
+      </TextField>
+      <PasswordField layoutX="1392.0" layoutY="571.0" prefHeight="48.0" prefWidth="401.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </PasswordField>
+      <JFXButton buttonType="RAISED" layoutX="1473.0" layoutY="718.0" text="Submit">
+         <font>
+            <Font name="Bell MT" size="33.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@css/icons8-paper-plane-94.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7368420958518982" green="0.2490253448486328" blue="0.6880604028701782" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+      </JFXButton>
+   </children>
 </AnchorPane>
