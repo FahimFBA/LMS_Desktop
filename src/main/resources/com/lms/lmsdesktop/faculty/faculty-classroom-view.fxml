@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="980.0" prefWidth="1850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.FacultyClassroomController">
+   <children>
+      <VBox layoutX="233.0" layoutY="141.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="65.0" prefWidth="1850.0" style="-fx-background-color: #42eff5;">
+               <children>
+                  <Label layoutX="732.0" layoutY="12.0" text="Faculty Course View" underline="true">
+                     <font>
+                        <Font name="Berlin Sans FB" size="46.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="45.0" prefWidth="1850.0">
+               <children>
+                  <Label layoutX="625.0" layoutY="6.0" prefHeight="26.0" prefWidth="600.0" text="Select your course name and section. Then click on &quot;LOAD&quot;">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="204.0" layoutY="41.0" text="Course Name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="204.0" layoutY="100.0" text="Section">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox layoutX="369.0" layoutY="44.0" prefHeight="25.0" prefWidth="549.0" />
+                  <ChoiceBox layoutX="369.0" layoutY="103.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
