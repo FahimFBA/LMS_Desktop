@@ -39,7 +39,10 @@
          <font>
             <Font size="29.0" />
          </font></TextField>
-      <PasswordField layoutX="1572.0" layoutY="747.0" prefHeight="63.0" prefWidth="266.0" />
+      <PasswordField layoutX="1572.0" layoutY="747.0" prefHeight="63.0" prefWidth="266.0">
+         <font>
+            <Font size="29.0" />
+         </font></PasswordField>
       <JFXButton fx:id="Home" layoutX="14.0" layoutY="14.0" onAction="#Home" ripplerFill="#82c77f" text="Home">
          <font>
             <Font size="36.0" />
