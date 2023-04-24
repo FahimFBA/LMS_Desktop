@@ -147,23 +147,53 @@ public class FacultyClassroomController {
     void addNewContent(ActionEvent event) {
         // open new-data-add.fxml
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("new-data-add.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.initModality(Modality.APPLICATION_MODAL);
-//            stage.initStyle(StageStyle.UNDECORATED);
-            stage.setTitle("Add New Content");
-            stage.setScene(new Scene(root1));
-            stage.show();
+            openNewDataAddWindow(courseNameDropMenu.getValue(), sectionDropMenu.getValue());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+    @FXML
+    void deleteSelectedContent(ActionEvent event) {
+        CourseContent selectedContent = contentTable.getSelectionModel().getSelectedItem();
+        if (selectedContent != null) {
+            try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
+                 PreparedStatement preparedStatement = connection.prepareStatement(
+                         "DELETE FROM lms_data WHERE course_content_date = ? AND course_content_data = ?")) {
+
+                preparedStatement.setString(1, selectedContent.getDate());
+                preparedStatement.setString(2, selectedContent.getContent());
+
+                preparedStatement.executeUpdate();
+                contentTable.getItems().remove(selectedContent);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    // Inside FacultyClassroom.java
+    private void openNewDataAddWindow(String courseName, String courseSection) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("new-data-add.fxml"));
+            Parent root = loader.load();
+            NewDataAddController newDataAddController = loader.getController();
+            newDataAddController.setCourseInfo(courseName, courseSection);
+
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @FXML
     void ExitWindow(ActionEvent event) {
         Stage stage = (Stage) Exit.getScene().getWindow();
         stage.close();
     }
+    
 
 }

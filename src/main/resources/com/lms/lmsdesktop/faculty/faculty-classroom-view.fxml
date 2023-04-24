@@ -65,7 +65,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="138.0" layoutY="172.0" text="Delete">
+                  <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="138.0" layoutY="172.0" onAction="#deleteSelectedContent" text="Delete">
                      <font>
                         <Font size="20.0" />
                      </font>

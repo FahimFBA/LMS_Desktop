@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="597.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.NewDataAdd">
+<AnchorPane prefHeight="597.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.NewDataAddController">
    <children>
       <BorderPane layoutX="160.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -81,36 +81,45 @@
                                           </ImageView>
                                        </graphic>
                                     </JFXButton>
-                                    <JFXButton buttonType="RAISED" layoutX="639.0" layoutY="441.0" prefHeight="57.0" prefWidth="135.0" style="-fx-background-color: #15A1AB;" text="Save">
+                                    <JFXButton fx:id="Exit" buttonType="RAISED" layoutX="82.0" layoutY="446.0" onAction="#ExitWindow" prefHeight="46.0" prefWidth="112.0" style="-fx-background-color: #76b5c5;" text="Exit">
                                        <font>
-                                          <Font size="27.0" />
+                                          <Font name="System Bold" size="22.0" />
                                        </font>
                                        <graphic>
-                                          <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@css/icons8-save-as-94.png" />
-                                             </image>
-                                          </ImageView>
-                                       </graphic>
-                                    </JFXButton>
-                                    <JFXButton buttonType="RAISED" layoutX="92.0" layoutY="441.0" prefHeight="57.0" prefWidth="135.0" style="-fx-background-color: #15A1AB;" text="Exit">
-                                       <font>
-                                          <Font size="27.0" />
-                                       </font>
-                                       <graphic>
-                                          <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@css/icons8-close-94.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
                                     </JFXButton>
+                                    <JFXButton fx:id="Save" buttonType="RAISED" layoutX="599.0" layoutY="446.0" onAction="#saveData" prefHeight="46.0" prefWidth="112.0" style="-fx-background-color: #76b5c5;" text="Save">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@css/icons8-save-as-94.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></JFXButton>
                                  </children>
                               </AnchorPane>
                            </children>
                         </VBox>
                      </center>
                   </BorderPane>
+                  <Label fx:id="course_name_label" layoutX="87.0" layoutY="15.0" text="Course Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="course_section_label" layoutX="581.0" layoutY="16.0" text="Section">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </center>
