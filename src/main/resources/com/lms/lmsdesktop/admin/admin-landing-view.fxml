@@ -35,15 +35,15 @@
             <Font name="System Bold" size="33.0" />
          </font>
       </Label>
-      <TextField layoutX="1572.0" layoutY="673.0" prefHeight="63.0" prefWidth="266.0">
+      <TextField fx:id="admin_user_id" layoutX="1572.0" layoutY="673.0" prefHeight="63.0" prefWidth="266.0">
          <font>
             <Font size="29.0" />
          </font></TextField>
-      <PasswordField layoutX="1572.0" layoutY="747.0" prefHeight="63.0" prefWidth="266.0">
+      <PasswordField fx:id="admin_pass" layoutX="1572.0" layoutY="747.0" prefHeight="63.0" prefWidth="266.0">
          <font>
             <Font size="29.0" />
          </font></PasswordField>
-      <JFXButton fx:id="Home" layoutX="14.0" layoutY="14.0" onAction="#Home" ripplerFill="#82c77f" text="Home">
+      <JFXButton fx:id="Home" layoutX="14.0" layoutY="14.0" onAction="#handleHomeButton" ripplerFill="#82c77f" text="Home">
          <font>
             <Font size="36.0" />
          </font>
@@ -55,7 +55,7 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton layoutX="1590.0" layoutY="843.0" ripplerFill="#62c8fc" text="Submit">
+      <JFXButton fx:id="adminSubmit" layoutX="1590.0" layoutY="843.0" onAction="#adminSubmit" ripplerFill="#62c8fc" text="Submit">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
