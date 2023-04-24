@@ -1,88 +1,69 @@
 package com.lms.lmsdesktop.faculty;
 
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 public class CourseContent {
 
-    // The existing fields and constructors
+    private StringProperty date;
+    private StringProperty content;
+    private BooleanProperty notification;
+    private StringProperty notes;
 
-    public int getCourse_contentSerial() {
-        return course_contentSerial;
+    public CourseContent(String date, String content, boolean notification, String notes) {
+        this.date = new SimpleStringProperty(date);
+        this.content = new SimpleStringProperty(content);
+        this.notification = new SimpleBooleanProperty(notification);
+        this.notes = new SimpleStringProperty(notes);
     }
 
-    public String getCourse_content_date() {
-        return course_content_date;
+    public String getDate() {
+        return date.get();
     }
 
-    public String getCourse_content_newOrUpdate() {
-        return course_content_newOrUpdate;
+    public void setDate(String date) {
+        this.date.set(date);
     }
 
-    public String getCourse_content_data() {
-        return course_content_data;
+    public StringProperty dateProperty() {
+        return date;
     }
 
-    public boolean getCourse_send_notification() {
-        return course_send_notification;
+    public String getContent() {
+        return content.get();
     }
 
-    public String getCourse_notes() {
-        return course_notes;
+    public void setContent(String content) {
+        this.content.set(content);
     }
 
-
-
-    private int course_contentSerial;
-    private String course_content_date;
-    private String course_content_newOrUpdate;
-    private String course_content_data;
-    private boolean course_send_notification;
-    private String course_notes;
-
-    public CourseContent(int course_contentSerial, String course_content_date, String course_content_newOrUpdate, String course_content_data, boolean course_send_notification, String course_notes) {
-        this.course_contentSerial = course_contentSerial;
-        this.course_content_date = course_content_date;
-        this.course_content_newOrUpdate = course_content_newOrUpdate;
-        this.course_content_data = course_content_data;
-        this.course_send_notification = course_send_notification;
-        this.course_notes = course_notes;
+    public StringProperty contentProperty() {
+        return content;
     }
 
-
-
-    public void setCourse_contentSerial(int course_contentSerial) {
-        this.course_contentSerial = course_contentSerial;
+    public boolean isNotification() {
+        return notification.get();
     }
 
-
-
-    public void setCourse_content_date(String course_content_date) {
-        this.course_content_date = course_content_date;
+    public void setNotification(boolean notification) {
+        this.notification.set(notification);
     }
 
-
-
-    public void setCourse_content_newOrUpdate(String course_content_newOrUpdate) {
-        this.course_content_newOrUpdate = course_content_newOrUpdate;
+    public BooleanProperty notificationProperty() {
+        return notification;
     }
 
-
-
-    public void setCourse_content_data(String course_content_data) {
-        this.course_content_data = course_content_data;
+    public String getNotes() {
+        return notes.get();
     }
 
-    public boolean isCourse_send_notification() {
-        return course_send_notification;
+    public void setNotes(String notes) {
+        this.notes.set(notes);
     }
 
-    public void setCourse_send_notification(boolean course_send_notification) {
-        this.course_send_notification = course_send_notification;
+    public StringProperty notesProperty() {
+        return notes;
     }
-
-
-
-    public void setCourse_notes(String course_notes) {
-        this.course_notes = course_notes;
-    }
-
-
 }

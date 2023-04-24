@@ -3,28 +3,40 @@ package com.lms.lmsdesktop.faculty;
 import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.util.converter.IntegerStringConverter;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.control.cell.CheckBoxTableCell;
-import javafx.util.converter.IntegerStringConverter;
-import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.control.cell.CheckBoxTableCell;
-import javafx.util.converter.IntegerStringConverter;
+import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.io.IOException;
+import java.net.URL;
 import java.sql.*;
 
 public class FacultyClassroomController {
 
     @FXML
+    private JFXButton addButton;
+
+    @FXML
+    private JFXButton deleteButton;
+
+    @FXML
     private ChoiceBox<String> courseNameDropMenu;
 
     @FXML
-    private JFXButton saveButton;
+    private JFXButton Exit;
 
     @FXML
     private ChoiceBox<String> sectionDropMenu;
@@ -35,14 +47,11 @@ public class FacultyClassroomController {
     @FXML
     private TableView<CourseContent> contentTable;
 
-    @FXML
-    private TableColumn<CourseContent, Integer> table_serial;
 
     @FXML
     private TableColumn<CourseContent, String> table_date;
 
-    @FXML
-    private TableColumn<CourseContent, String> table_new_or_update;
+
 
     @FXML
     private TableColumn<CourseContent, String> table_content;
@@ -57,50 +66,26 @@ public class FacultyClassroomController {
     private static final String DB_USER = "root";
     private static final String DB_PASS = "root";
 
+    @FXML
     public void initialize() {
+        loadCourseNamesAndSections();
+        configureTableColumns();
+    }
+
+    private void loadCourseNamesAndSections() {
         try {
             Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
             Statement statement = connection.createStatement();
-            ResultSet resultSet;
 
-            // Load course_name values
-            resultSet = statement.executeQuery("SELECT course_name FROM lms_data");
-            while (resultSet.next()) {
-                courseNameDropMenu.getItems().add(resultSet.getString("course_name"));
+            ResultSet courseNameResultSet = statement.executeQuery("SELECT DISTINCT course_name FROM lms_data");
+            while (courseNameResultSet.next()) {
+                courseNameDropMenu.getItems().add(courseNameResultSet.getString("course_name"));
             }
 
-            // Load course_section values
-            resultSet = statement.executeQuery("SELECT course_section FROM lms_data");
-            while (resultSet.next()) {
-                sectionDropMenu.getItems().add(resultSet.getString("course_section"));
+            ResultSet courseSectionResultSet = statement.executeQuery("SELECT DISTINCT course_section FROM lms_data");
+            while (courseSectionResultSet.next()) {
+                sectionDropMenu.getItems().add(courseSectionResultSet.getString("course_section"));
             }
-
-            // Set up table columns
-            table_serial.setCellValueFactory(new PropertyValueFactory<>("course_contentSerial"));
-            table_date.setCellValueFactory(new PropertyValueFactory<>("course_content_date"));
-            table_new_or_update.setCellValueFactory(new PropertyValueFactory<>("course_content_newOrUpdate"));
-            table_content.setCellValueFactory(new PropertyValueFactory<>("course_content_data"));
-            table_notification.setCellValueFactory(new PropertyValueFactory<>("course_send_notification"));
-            table_notes.setCellValueFactory(new PropertyValueFactory<>("course_notes"));
-
-            // Add cell factories and commit edit handlers for editable TableColumns
-            table_date.setCellFactory(TextFieldTableCell.forTableColumn());
-            table_date.setOnEditCommit(e -> e.getRowValue().setCourse_content_date(e.getNewValue()));
-
-            table_new_or_update.setCellFactory(TextFieldTableCell.forTableColumn());
-            table_new_or_update.setOnEditCommit(e -> e.getRowValue().setCourse_content_newOrUpdate(e.getNewValue()));
-
-            table_content.setCellFactory(TextFieldTableCell.forTableColumn());
-            table_content.setOnEditCommit(e -> e.getRowValue().setCourse_content_data(e.getNewValue()));
-
-            table_notes.setCellFactory(TextFieldTableCell.forTableColumn());
-            table_notes.setOnEditCommit(e -> e.getRowValue().setCourse_notes(e.getNewValue()));
-
-            // Allow editing in TableView
-            contentTable.setEditable(true);
-
-            loadButton.setOnAction(e -> loadTableData());
-            saveButton.setOnAction(e -> saveTableData()); // Bind the saveButton action
 
             connection.close();
         } catch (Exception e) {
@@ -108,98 +93,37 @@ public class FacultyClassroomController {
         }
     }
 
-    private void refreshTable() {
-        contentTable.refresh();
-    }
-    private void saveTableData() {
-        try {
-            Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            PreparedStatement preparedStatement;
+    private void configureTableColumns() {
+        table_date.setCellValueFactory(new PropertyValueFactory<>("date"));
+        table_content.setCellValueFactory(new PropertyValueFactory<>("content"));
+        table_notification.setCellValueFactory(new PropertyValueFactory<>("notification"));
+        table_notes.setCellValueFactory(new PropertyValueFactory<>("notes"));
 
-            for (CourseContent courseContent : contentTable.getItems()) {
-                String query = "UPDATE lms_data SET course_content_date = ?, course_content_newOrUpdate = ?, course_content_data = ?, course_send_notification = ?, course_notes = ? WHERE course_contentSerial = ?";
-                preparedStatement = connection.prepareStatement(query);
-
-                preparedStatement.setString(1, courseContent.getCourse_content_date());
-                preparedStatement.setString(2, courseContent.getCourse_content_newOrUpdate());
-                preparedStatement.setString(3, courseContent.getCourse_content_data());
-                preparedStatement.setBoolean(4, courseContent.getCourse_send_notification());
-                preparedStatement.setString(5, courseContent.getCourse_notes());
-                preparedStatement.setInt(6, courseContent.getCourse_contentSerial());
-
-                int rowsUpdated = preparedStatement.executeUpdate();
-                System.out.println("Updating row with course_contentSerial: " + courseContent.getCourse_contentSerial());
-                System.out.println("Rows updated: " + rowsUpdated);
-
-                // Call updateRowInDatabase() to get the updated data and check if it has been updated correctly
-                updateRowInDatabase(courseContent);
-            }
-
-            connection.close();
-            refreshTable(); // Refresh the TableView to display the updated data
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
-
-    private void updateRowInDatabase(CourseContent courseContent) {
-        try {
-            Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            connection.setAutoCommit(false);
-            String query = "UPDATE lms_data SET course_content_date = ?, course_content_newOrUpdate = ?, course_content_data = ?, course_send_notification = ?, course_notes = ? WHERE course_contentSerial = ?";
-
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, courseContent.getCourse_content_date());
-            preparedStatement.setString(2, courseContent.getCourse_content_newOrUpdate());
-            preparedStatement.setString(3, courseContent.getCourse_content_data());
-            preparedStatement.setBoolean(4, courseContent.getCourse_send_notification());
-            preparedStatement.setString(5, courseContent.getCourse_notes());
-            preparedStatement.setInt(6, courseContent.getCourse_contentSerial());
-
-            System.out.println("Executing query: " + preparedStatement.toString());
-
-            int rowsUpdated = preparedStatement.executeUpdate();
-            System.out.println("Rows updated: " + rowsUpdated);
-
-            connection.commit();
-
-            // Add a SELECT query to fetch the updated data
-            String selectQuery = "SELECT * FROM lms_data WHERE course_contentSerial = ?";
-            PreparedStatement selectPreparedStatement = connection.prepareStatement(selectQuery);
-            selectPreparedStatement.setInt(1, courseContent.getCourse_contentSerial());
-            ResultSet resultSet = selectPreparedStatement.executeQuery();
-            if (resultSet.next()) {
-                System.out.println("Updated data:");
-                System.out.println("course_content_date: " + resultSet.getString("course_content_date"));
-                System.out.println("course_content_newOrUpdate: " + resultSet.getString("course_content_newOrUpdate"));
-                System.out.println("course_content_data: " + resultSet.getString("course_content_data"));
-                System.out.println("course_send_notification: " + resultSet.getBoolean("course_send_notification"));
-                System.out.println("course_notes: " + resultSet.getString("course_notes"));
-            }
-
-            connection.setAutoCommit(true);
-            connection.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        table_notification.setCellFactory(CheckBoxTableCell.forTableColumn(table_notification));
+        table_notes.setCellFactory(TextFieldTableCell.forTableColumn());
     }
 
     private void loadTableData() {
+        String selectedCourseName = courseNameDropMenu.getValue();
+        String selectedCourseSection = sectionDropMenu.getValue();
+
+        if (selectedCourseName == null || selectedCourseSection == null) {
+            return;
+        }
+
         try {
             Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            Statement statement = connection.createStatement();
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "SELECT * FROM lms_data WHERE course_name = ? AND course_section = ?");
+            preparedStatement.setString(1, selectedCourseName);
+            preparedStatement.setString(2, selectedCourseSection);
 
             ObservableList<CourseContent> data = FXCollections.observableArrayList();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM lms_data");
+            ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
                 data.add(new CourseContent(
-                        resultSet.getInt("course_contentSerial"),
                         resultSet.getString("course_content_date"),
-                        resultSet.getString("course_content_newOrUpdate"),
                         resultSet.getString("course_content_data"),
                         resultSet.getBoolean("course_send_notification"),
                         resultSet.getString("course_notes")
@@ -213,4 +137,33 @@ public class FacultyClassroomController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    void loadButtonClicked(ActionEvent event) {
+        loadTableData();
+    }
+
+    @FXML
+    void addNewContent(ActionEvent event) {
+        // open new-data-add.fxml
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("new-data-add.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+//            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setTitle("Add New Content");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void ExitWindow(ActionEvent event) {
+        Stage stage = (Stage) Exit.getScene().getWindow();
+        stage.close();
+    }
+
 }
