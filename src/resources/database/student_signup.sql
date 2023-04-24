@@ -64,6 +64,37 @@ LOCK TABLES `faculty_table` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `lms_data`
+--
+
+DROP TABLE IF EXISTS `lms_data`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `lms_data` (
+  `course_id` int NOT NULL,
+  `course_name` varchar(100) DEFAULT NULL,
+  `course_section` varchar(3) NOT NULL,
+  `course_contentSerial` int DEFAULT NULL,
+  `course_content_date` datetime DEFAULT NULL,
+  `course_content_newOrUpdate` enum('yes','no') DEFAULT NULL,
+  `course_content_data` varchar(3000) DEFAULT NULL,
+  `course_send_notification` enum('yes','no') DEFAULT NULL,
+  `course_notes` varchar(2000) DEFAULT NULL,
+  PRIMARY KEY (`course_id`,`course_section`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `lms_data`
+--
+
+LOCK TABLES `lms_data` WRITE;
+/*!40000 ALTER TABLE `lms_data` DISABLE KEYS */;
+INSERT INTO `lms_data` VALUES (101,'ICS','A',1,'2023-04-24 11:46:52','yes','Do your homework from book page: 21','yes','They have to do it');
+/*!40000 ALTER TABLE `lms_data` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `student_signup_table`
 --
 
@@ -98,4 +129,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-23 12:41:34
+-- Dump completed on 2023-04-24 18:10:03
