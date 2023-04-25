@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
@@ -34,6 +35,10 @@ public class FacultyClassroomController {
 
     @FXML
     private ChoiceBox<String> courseNameDropMenu;
+
+
+    @FXML
+    private JFXButton backToDashboard;
 
     @FXML
     private JFXButton Exit;
@@ -194,6 +199,42 @@ public class FacultyClassroomController {
         Stage stage = (Stage) Exit.getScene().getWindow();
         stage.close();
     }
-    
+
+
+    @FXML
+    void openDashboard(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("faculty-lms-view.fxml"));
+            Parent root = loader.load();
+            FacultyLMSController facultyLMSController = loader.getController();
+            Scene scene = new Scene(root);
+
+            // Create a new stage for the LMS view
+            Stage lmsStage = new Stage();
+            lmsStage.setScene(scene);
+
+            // Set mouse drag event for moving the window
+            root.setOnMousePressed(mouseEvent -> {
+                final double x = mouseEvent.getSceneX();
+                final double y = mouseEvent.getSceneY();
+                root.setOnMouseDragged(dragEvent -> {
+                    lmsStage.setX(dragEvent.getScreenX() - x);
+                    lmsStage.setY(dragEvent.getScreenY() - y);
+                });
+            });
+
+            // Show the LMS view
+            lmsStage.show();
+
+            // Hide the main window
+            Stage mainStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            mainStage.hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 
 }

@@ -23,6 +23,18 @@
                         <Font name="Berlin Sans FB" size="46.0" />
                      </font>
                   </Label>
+                  <JFXButton fx:id="backToDashboard" buttonType="RAISED" layoutX="27.0" layoutY="15.0" onAction="#openDashboard" ripplerFill="#bc3030" text="Dashboard">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@css/icons8-dashboard-96.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </JFXButton>
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="45.0" prefWidth="1850.0">
