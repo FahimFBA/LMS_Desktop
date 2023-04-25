@@ -16,14 +16,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="980.0" prefWidth="1850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="980.0" prefWidth="1850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.FacultyLMSController">
    <stylesheets>
       <URL value="@css/FacultyLMS.css" />
     </stylesheets>
    <children>
       <BorderPane layoutX="574.0" layoutY="293.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <AnchorPane prefHeight="105.0" prefWidth="1280.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="105.0" prefWidth="1280.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
                <children>
                   <Pane layoutX="396.0" layoutY="-47.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #063970;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
@@ -159,7 +159,7 @@
             </AnchorPane>
          </top>
          <left>
-            <AnchorPane fx:id="slider" prefHeight="615.0" prefWidth="177.0" BorderPane.alignment="CENTER">
+            <AnchorPane fx:id="slider" prefHeight="615.0" prefWidth="177.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
                <children>
                   <VBox layoutX="39.0" layoutY="181.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #e28743;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                      <children>
@@ -279,7 +279,7 @@
                               </ImageView>
                            </center>
                            <bottom>
-                              <JFXButton prefHeight="52.0" prefWidth="187.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Classroom" BorderPane.alignment="CENTER">
+                              <JFXButton fx:id="facultyClassroom" onAction="#openClassroom" prefHeight="52.0" prefWidth="187.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Classroom" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font name="Bell MT Bold" size="27.0" />
                                  </font>

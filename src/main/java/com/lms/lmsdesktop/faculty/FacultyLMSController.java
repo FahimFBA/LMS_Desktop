@@ -1,13 +1,19 @@
 package com.lms.lmsdesktop.faculty;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -15,12 +21,16 @@ public class FacultyLMSController implements Initializable {
 
     @FXML
     private AnchorPane slider;
+    @FXML
+    private JFXButton facultyClassroom;
 
     @FXML
     private Label Menu;
 
     @FXML
     private Label MenuClose;
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -57,4 +67,23 @@ public class FacultyLMSController implements Initializable {
             });
         });
     }
+
+    @FXML
+    void openClassroom(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("faculty-classroom-view.fxml"));
+            Parent root = loader.load();
+            FacultyClassroomController facultyClassroomController = loader.getController();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+            // hide the main window
+            Stage stage1 = (Stage) facultyClassroom.getScene().getWindow();
+            stage1.hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
