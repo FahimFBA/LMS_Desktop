@@ -4,6 +4,7 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.beans.value.ObservableValue;
 
 public class CourseContent {
 
@@ -17,6 +18,11 @@ public class CourseContent {
         this.content = new SimpleStringProperty(content);
         this.notification = new SimpleBooleanProperty(notification);
         this.notes = new SimpleStringProperty(notes);
+    }
+
+    public CourseContent(String content, String date) {
+        this.date = new SimpleStringProperty(date);
+        this.content = new SimpleStringProperty(content);
     }
 
     public String getDate() {
@@ -65,5 +71,13 @@ public class CourseContent {
 
     public StringProperty notesProperty() {
         return notes;
+    }
+
+    public ObservableValue<String> getDateProperty() {
+        return date;
+    }
+
+    public ObservableValue<String> getContentProperty() {
+        return content;
     }
 }
