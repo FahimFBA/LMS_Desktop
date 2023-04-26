@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="617.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.admin.ApprovedStudentsController">
+   <children>
+      <BorderPane layoutX="286.0" layoutY="209.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="93.0" prefWidth="954.0" style="-fx-background-color: #ffe6b4;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="359.0" layoutY="28.0" text="Approved Students" underline="true">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="95.0" prefWidth="954.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane layoutY="-1.0" prefHeight="115.0" prefWidth="955.0" style="-fx-background-color: #ecd39b;">
+                     <right>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton buttonType="RAISED" layoutX="49.0" layoutY="25.0" style="-fx-background-color: #76b5c5;" text="Save">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </right>
+                     <left>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton layoutX="57.0" layoutY="25.0" style="-fx-background-color: #76b5c5;" text="Exit">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView layoutX="-1.0" prefHeight="464.0" prefWidth="954.0">
+                    <columns>
+                      <TableColumn prefWidth="123.0" text="Student's ID" />
+                      <TableColumn prefWidth="216.0" text="Student's Name" />
+                        <TableColumn prefWidth="213.0" text="Student's Email" />
+                        <TableColumn prefWidth="157.0" text="Student's Password" />
+                        <TableColumn prefWidth="115.0" text="Status" />
+                        <TableColumn prefWidth="129.0" text="Restrict Access" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
