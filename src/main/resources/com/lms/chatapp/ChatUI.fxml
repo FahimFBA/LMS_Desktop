@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.chatapp.ChatController">
+    <top>
+        <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #6a5acd;">
+            <ImageView fx:id="profilePicture" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@admin.png" />
+                </image>
+            </ImageView>
+            <TextField fx:id="usernameField" prefHeight="40.0" prefWidth="200.0" promptText="Enter your username" style="-fx-background-radius: 20;" />
+            <Button fx:id="connectButton" mnemonicParsing="false" onAction="#connectButtonAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-radius: 20;" text="Connect" />
+         <Button fx:id="joinChatRoomButton" layoutX="360.0" layoutY="15.0" mnemonicParsing="false" onAction="#joinChatRoomButtonAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-radius: 20;" text="Join Chatroom" />
+            <Button fx:id="disconnectButton" disable="true" mnemonicParsing="false" onAction="#disconnectButtonAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-radius: 20;" text="Disconnect" />
+            <Button fx:id="changeProfilePictureButton" mnemonicParsing="false" onAction="#changeProfilePictureButtonAction" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 20;" text="Change Profile Picture" />
+        </HBox>
+    </top>
+    <center>
+        <HBox spacing="10.0">
+            <VBox spacing="10.0">
+                <Label style="-fx-font-size: 18pt;" text="Chat Rooms" />
+                <ListView fx:id="chatRoomsListView" prefHeight="400.0" prefWidth="200.0" />
+            </VBox>
+            <VBox spacing="10.0">
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <ImageView fx:id="chatRoomPicture" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@icons8-male-user-94.png" />
+                        </image>
+                    </ImageView>
+                    <Label fx:id="chatRoomLabel" style="-fx-font-size: 18pt;" />
+                </HBox>
+                <TextArea fx:id="chatArea" editable="false" prefHeight="400.0" prefWidth="500.0" />
+                <HBox spacing="10.0">
+                    <TextField fx:id="chatTextArea" onAction="#sendMessageAction" prefHeight="40.0" prefWidth="400.0" promptText="Enter your message" />
+                    <Button fx:id="sendMessageButton" disable="true" mnemonicParsing="false" onAction="#sendMessageAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-radius: 20;" text="Send" />
+                </HBox>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>
