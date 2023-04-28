@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="375.0" prefWidth="669.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label layoutX="14.0" layoutY="14.0" text="Host IP:" />
+                <TextField fx:id="txtHostIP" layoutX="61.0" layoutY="10.0" text="localhost" />
+                <Label layoutX="222.0" layoutY="14.0" text="Username:" />
+                <TextField fx:id="txtUsername" layoutX="286.0" layoutY="10.0">
+                    <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="btnLogin" layoutX="453.0" layoutY="10.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="79.0" text="Login" />
+                <Button fx:id="btnLogout" disable="true" layoutX="541.0" layoutY="10.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="79.0" text="Logout" />
+                <TextArea fx:id="txtAreaServerMsgs" editable="false" layoutX="14.0" layoutY="43.0" prefHeight="193.0" prefWidth="421.0" wrapText="true" />
+                <TitledPane animated="false" layoutX="450.0" layoutY="41.0" text="Users">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="172.0">
+                            <children>
+                                <ListView fx:id="listUser" layoutX="5.0" prefHeight="176.0" prefWidth="163.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <Button fx:id="btnSend" layoutX="453.0" layoutY="313.0" mnemonicParsing="false" onAction="#sendMessage" onKeyPressed="#sendMessage" prefHeight="44.0" prefWidth="174.0" text="Send" />
+                <TextArea fx:id="txtUserMsg" layoutX="14.0" layoutY="251.0" onKeyPressed="#handleEnterPressed" prefHeight="114.0" prefWidth="421.0" promptText="Type your Message here..." wrapText="true" />
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>
+        <URL value="@css/ChatApp.css" />
+    </stylesheets>
+</VBox>

@@ -3,6 +3,7 @@ module com.lms.lmsdesktop {
     requires javafx.fxml;
     requires java.sql;
     requires com.jfoenix;
+    requires javafx.media;
 
 
     opens com.lms.lmsdesktop to javafx.fxml;
@@ -15,5 +16,7 @@ module com.lms.lmsdesktop {
     exports com.lms.lmsdesktop.admin;
     opens com.lms.lmsdesktop.student_courseSelection to javafx.fxml;
     exports com.lms.lmsdesktop.student_courseSelection;
+    opens com.lms.lmsdesktop.chat to javafx.fxml;
+    exports com.lms.lmsdesktop.chat;
 
 }

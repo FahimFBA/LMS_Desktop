@@ -17,6 +17,7 @@ A desktop application that lets the faculties, students and admin to interact wi
 - [ ] The quiz includes code editor for programming questions
 - [ ] The quiz has code blocks that can run the code and show the output
 
+**For Server, `ChatServer.java`. For Client, `ChatClient.java`.**
 
 ## Screenshots
 
