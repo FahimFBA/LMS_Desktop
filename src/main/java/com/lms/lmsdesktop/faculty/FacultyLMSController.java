@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -30,7 +31,11 @@ public class FacultyLMSController implements Initializable {
     @FXML
     private Label MenuClose;
 
+    @FXML
+    private JFXButton calculator;
 
+    @FXML
+    private JFXButton calculatorFromSlider;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -85,5 +90,22 @@ public class FacultyLMSController implements Initializable {
             e.printStackTrace();
         }
     }
+    @FXML
+    void openCalculator(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/lms/lmsdesktop/calculator/calculator-view.fxml"));
+            Parent calculatorView = fxmlLoader.load();
+
+            Scene scene = new Scene(calculatorView);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Calculator");
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }
