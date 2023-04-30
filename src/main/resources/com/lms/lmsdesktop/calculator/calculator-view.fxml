@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="297.0" style="-fx-background-color: grey;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.calculator.CalculatorController">
+   <children>
+      <VBox>
+         <children>
+            <TextArea id="display" fx:id="display" prefHeight="58.0" prefWidth="238.0" styleClass="display" />
+            <GridPane alignment="CENTER" hgap="1.0" vgap="2.0">
+              <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="buttonDelete" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" prefHeight="47.0" prefWidth="59.0" styleClass="topOperators" text="AC" />
+                  <Button fx:id="change" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeSign" prefHeight="47.0" prefWidth="59.0" styleClass="topOperators" text="+/-" GridPane.columnIndex="1" />
+                  <Button fx:id="percent" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="59.0" styleClass="topOperators" text="\%" GridPane.columnIndex="2" />
+                  <Button fx:id="divided" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#operation" prefHeight="47.0" prefWidth="59.0" styleClass="operators" text="÷" GridPane.columnIndex="3" />
+                  <Button fx:id="seven" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="59.0" text="7" GridPane.rowIndex="1" />
+                  <Button fx:id="eight" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="59.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="nine" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="59.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="times" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#operation" prefHeight="47.0" prefWidth="59.0" styleClass="operators" text="╳" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="four" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="59.0" text="4" GridPane.rowIndex="2" />
+                  <Button fx:id="five" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="59.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="six" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="59.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="minus" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#operation" prefHeight="47.0" prefWidth="59.0" styleClass="operators" text="—" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button fx:id="one" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="59.0" text="1" GridPane.rowIndex="3" />
+                  <Button fx:id="two" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="59.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="three" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="59.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="plus" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#operation" prefHeight="47.0" prefWidth="59.0" styleClass="operators" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button fx:id="comma" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="59.0" text="," GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button fx:id="equals" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#result" prefHeight="47.0" prefWidth="59.0" styleClass="operators" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Button fx:id="zero" alignment="CENTER" mnemonicParsing="false" onAction="#handleClick" prefHeight="47.0" prefWidth="119.0" text="0" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

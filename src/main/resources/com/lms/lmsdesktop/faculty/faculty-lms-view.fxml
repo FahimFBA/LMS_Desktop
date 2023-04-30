@@ -96,7 +96,7 @@
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton prefHeight="50.0" prefWidth="157.0" text="Calculator" textFill="WHITE">
+                        <JFXButton fx:id="calculator" onAction="#openCalculator" prefHeight="50.0" prefWidth="157.0" text="Calculator" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -207,7 +207,7 @@
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" styleClass="sidebarItem" text="Calculator" textFill="WHITE">
+                        <JFXButton fx:id="calculatorFromSlider" alignment="BASELINE_LEFT" onAction="#openCalculator" prefHeight="52.0" prefWidth="177.0" styleClass="sidebarItem" text="Calculator" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
