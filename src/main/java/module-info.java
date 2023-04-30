@@ -22,5 +22,4 @@ module com.lms.lmsdesktop {
     exports com.lms.lmsdesktop.chat;
     opens com.lms.lmsdesktop.calculator to javafx.fxml;
     exports com.lms.lmsdesktop.calculator;
-
 }
