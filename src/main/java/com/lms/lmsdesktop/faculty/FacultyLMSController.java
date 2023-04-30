@@ -27,7 +27,8 @@ public class FacultyLMSController implements Initializable {
 
     @FXML
     private Label Menu;
-
+    @FXML
+    private JFXButton chatServer;
     @FXML
     private Label MenuClose;
 
@@ -124,6 +125,20 @@ public class FacultyLMSController implements Initializable {
         }
     }
 
-
+    @FXML
+    void openChatServerFaculty(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/lms/lmsdesktop/chat/ServerGUI.fxml"));
+            Parent chatServer = fxmlLoader.load();
+            Scene scene = new Scene(chatServer);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Chat Server");
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

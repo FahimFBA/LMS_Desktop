@@ -4,6 +4,8 @@ module com.lms.lmsdesktop {
     requires java.sql;
     requires com.jfoenix;
     requires javafx.media;
+    requires org.apache.poi.poi;
+    requires org.apache.poi.ooxml;
 
 
     opens com.lms.lmsdesktop to javafx.fxml;
@@ -20,5 +22,4 @@ module com.lms.lmsdesktop {
     exports com.lms.lmsdesktop.chat;
     opens com.lms.lmsdesktop.calculator to javafx.fxml;
     exports com.lms.lmsdesktop.calculator;
-
 }
