@@ -19,6 +19,8 @@ A desktop application that lets the faculties, students and admin to interact wi
 
 **For Server, `ChatServer.java`. For Client, `ChatClient.java`.**
 
+** VM option - `--module-path "C:\Program Files\Java\javafx-sdk-17.0.6\lib" --add-modules javafx.controls,javafx.fxml`
+
 ## Screenshots
 
 ## Team Members
