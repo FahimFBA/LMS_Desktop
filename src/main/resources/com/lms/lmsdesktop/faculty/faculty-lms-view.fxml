@@ -290,12 +290,12 @@
                            <center>
                               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                  <image>
-                                    <Image url="@css/calendar.png" />
+                                    <Image url="@css/7089160_google_meet_icon.png" />
                                  </image>
                               </ImageView>
                            </center>
                            <bottom>
-                              <JFXButton prefHeight="52.0" prefWidth="187.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Calendar" BorderPane.alignment="CENTER">
+                              <JFXButton fx:id="Meet" onAction="#openMeetWindow" prefHeight="52.0" prefWidth="187.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Meet" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font name="Bell MT Bold" size="27.0" />
                                  </font>

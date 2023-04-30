@@ -36,6 +36,8 @@ public class FacultyLMSController implements Initializable {
 
     @FXML
     private JFXButton calculatorFromSlider;
+    @FXML
+    private JFXButton Meet;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -94,18 +96,34 @@ public class FacultyLMSController implements Initializable {
     void openCalculator(ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/lms/lmsdesktop/calculator/calculator-view.fxml"));
-            Parent calculatorView = fxmlLoader.load();
-
-            Scene scene = new Scene(calculatorView);
+            Parent root = fxmlLoader.load();
+            Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setTitle("Calculator");
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void openMeetWindow(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/lms/lmsdesktop/faculty/google-meet-view.fxml"));
+            Parent googleMeetView = fxmlLoader.load();
+            Scene scene = new Scene(googleMeetView);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Google Meet");
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
 
 }
