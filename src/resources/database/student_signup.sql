@@ -81,7 +81,7 @@ CREATE TABLE `lms_data` (
   `course_send_notification` enum('yes','no') DEFAULT NULL,
   `course_notes` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`course_id`,`course_section`)
-) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=108 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +90,7 @@ CREATE TABLE `lms_data` (
 
 LOCK TABLES `lms_data` WRITE;
 /*!40000 ALTER TABLE `lms_data` DISABLE KEYS */;
-INSERT INTO `lms_data` VALUES (104,'ICS','A','2023-04-04 00:00:00','Homework: 4.5 to 4.9 everything.','yes','I need to check them later.');
+INSERT INTO `lms_data` VALUES (104,'ICS','A','2023-04-04 00:00:00','Homework: 4.5 to 4.9 everything.','yes','I need to check them later.'),(107,'ICS','A','2023-04-28 00:00:00','Lab test Final. Syllabus: Arrays','yes','I need to prepare the questions');
 /*!40000 ALTER TABLE `lms_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -129,4 +129,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-25  2:35:43
+-- Dump completed on 2023-05-01 23:40:37
