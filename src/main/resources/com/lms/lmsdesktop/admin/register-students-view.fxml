@@ -21,7 +21,7 @@
                         <Font name="System Bold" size="26.0" />
                      </font>
                   </Label>
-                  <JFXButton fx:id="updateButton" buttonType="RAISED" layoutX="14.0" layoutY="52.0" onAction="#ChangeData" text="Change">
+                  <JFXButton fx:id="updateButton" buttonType="RAISED" layoutX="207.0" layoutY="60.0" text="Change">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -33,7 +33,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="ExportButton" buttonType="RAISED" layoutX="234.0" layoutY="52.0" text="Export Data">
+                  <JFXButton fx:id="ExportButton" layoutX="312.0" layoutY="60.0" text="Export Data">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -45,7 +45,19 @@
                         <Font size="16.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="119.0" layoutY="52.0" text="Delete">
+                  <JFXButton layoutX="14.0" layoutY="60.0" text="Add">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@css/icons8-add-100.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="104.0" layoutY="60.0" text="Delete">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -53,18 +65,6 @@
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@css/icons8-delete-240.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton fx:id="refreshButton" buttonType="RAISED" layoutX="837.0" layoutY="52.0" onAction="#refreshDB" text="Refresh">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@css/refresh.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -83,7 +83,7 @@
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                      </left>
                      <center>
-                        <JFXButton fx:id="ExitButton" onAction="#ExitWindow" style="-fx-background-color: #76b5c5;" text="Exit" BorderPane.alignment="CENTER">
+                        <JFXButton fx:id="ExitButton" style="-fx-background-color: #76b5c5;" text="Exit" BorderPane.alignment="CENTER">
                            <font>
                               <Font size="30.0" />
                            </font>

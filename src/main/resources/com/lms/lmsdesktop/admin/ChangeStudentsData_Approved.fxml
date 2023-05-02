@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.admin.ChangeStudentsData_ApprovedController">
+   <children>
+      <BorderPane layoutX="382.0" layoutY="168.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="103.0" prefWidth="878.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="153.0" layoutY="30.0" text="Update The Approved Student Data">
+                     <font>
+                        <Font name="Bell MT Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="67.0" prefWidth="878.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="ExitButton" buttonType="RAISED" layoutX="417.0" layoutY="18.0" text="Exit">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="166.0" layoutY="56.0" text="Student's ID">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="163.0" layoutY="119.0" text="Student's Name">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="163.0" layoutY="199.0" text="Student's Email">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="163.0" layoutY="278.0" text="Student's Password">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="163.0" layoutY="352.0" text="Student's Status">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="student_ID" layoutX="510.0" layoutY="52.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="student_Name" layoutX="510.0" layoutY="115.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="student_Email" layoutX="510.0" layoutY="195.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="student_Password" layoutX="510.0" layoutY="274.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <JFXCheckBox fx:id="student_Status" layoutX="596.0" layoutY="354.0" text="OK">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXButton fx:id="saveToDB_Button" buttonType="RAISED" layoutX="411.0" layoutY="408.0" onAction="#SaveToDB" text="Save">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
