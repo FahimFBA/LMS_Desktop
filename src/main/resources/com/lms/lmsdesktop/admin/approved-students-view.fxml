@@ -45,7 +45,7 @@
                         <Font size="16.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="119.0" layoutY="52.0" text="Delete">
+                  <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="119.0" layoutY="52.0" onAction="#deleteRow" text="Delete">
                      <font>
                         <Font size="16.0" />
                      </font>

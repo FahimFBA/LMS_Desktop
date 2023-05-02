@@ -151,4 +151,27 @@ public class ApprovedStudentsController {
         }
     }
 
+    @FXML
+    public void deleteRow() {
+        // Get the selected student from the table
+        Student selectedStudent = approvedStudentTable.getSelectionModel().getSelectedItem();
+        if (selectedStudent == null) {
+            return;
+        }
+
+        // Delete the student from the database
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/student_signup", "root", "root")) {
+            PreparedStatement stmt = conn.prepareStatement("DELETE FROM student_signup_table WHERE student_id = ?");
+            stmt.setString(1, selectedStudent.getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        // Remove the student from the table's items list
+        approvedStudentTable.getItems().remove(selectedStudent);
+    }
+
+
+
 }
