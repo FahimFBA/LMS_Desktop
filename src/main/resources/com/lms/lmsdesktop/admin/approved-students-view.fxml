@@ -96,7 +96,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <TableView fx:id="approvedStudentTable" layoutX="-1.0" prefHeight="481.0" prefWidth="954.0">
+                  <TableView fx:id="approvedStudentTable" layoutX="-1.0" prefHeight="481.0" prefWidth="954.0" style="-fx-font-size: 14px;">
                     <columns>
                       <TableColumn fx:id="student_ID" prefWidth="123.0" text="Student's ID" />
                       <TableColumn fx:id="student_Name" prefWidth="216.0" text="Student's Name" />

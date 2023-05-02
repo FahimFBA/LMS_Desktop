@@ -9,11 +9,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 
-public class StudentRegister extends Application {
+public class ChangeStudentsData_Register extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         // Load the FXML file from the specified path
-        URL fxmlUrl = getClass().getResource("student-register-view.fxml");
+        URL fxmlUrl = getClass().getResource("ChangeStudentsData_Register.fxml");
         if (fxmlUrl == null) {
             // Handle error gracefully
             throw new IOException("FXML file not found");
@@ -25,14 +25,8 @@ public class StudentRegister extends Application {
         // Set up the scene and show the stage
         Scene scene = new Scene(root);
 
-
-        primaryStage.setTitle("Student Register");
+        primaryStage.setTitle("New students");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-
-    public static void main(String[] args) {
-        launch();
     }
 }

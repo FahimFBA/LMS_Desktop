@@ -46,7 +46,7 @@
                         </ImageView>
                      </center>
                      <bottom>
-                        <JFXButton buttonType="RAISED" prefHeight="44.0" prefWidth="204.0" ripplerFill="#a44b4b" style="-fx-background-color: #84d6e2; -fx-cursor: hand;" text="Register Students" BorderPane.alignment="CENTER">
+                        <JFXButton fx:id="RegisterNewStudentButton" buttonType="RAISED" onAction="#openStudentRegister" prefHeight="44.0" prefWidth="204.0" ripplerFill="#a44b4b" style="-fx-background-color: #84d6e2; -fx-cursor: hand;" text="Register Students" BorderPane.alignment="CENTER">
                            <font>
                               <Font size="20.0" />
                            </font>

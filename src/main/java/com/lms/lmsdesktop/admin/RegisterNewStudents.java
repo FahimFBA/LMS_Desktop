@@ -13,7 +13,7 @@ public class RegisterNewStudents extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         // Load the FXML file from the specified path
-        URL fxmlUrl = getClass().getResource("approved-students-view.fxml");
+        URL fxmlUrl = getClass().getResource("register-students-view.fxml");
         if (fxmlUrl == null) {
             // Handle error gracefully
             throw new IOException("FXML file not found");
@@ -25,7 +25,7 @@ public class RegisterNewStudents extends Application {
         // Set up the scene and show the stage
         Scene scene = new Scene(root);
 
-        primaryStage.setTitle("Approved students");
+        primaryStage.setTitle("Register New students");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

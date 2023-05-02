@@ -10,30 +10,18 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="617.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.admin.ApprovedStudentsController">
+<AnchorPane prefHeight="617.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.admin.RegisterNewStudentsController">
    <children>
       <BorderPane layoutX="286.0" layoutY="209.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <AnchorPane prefHeight="93.0" prefWidth="954.0" style="-fx-background-color: #ffe6b4;" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="359.0" layoutY="14.0" text="Approved Students" underline="true">
+                  <Label layoutX="338.0" layoutY="14.0" text="Register New Students" underline="true">
                      <font>
                         <Font name="System Bold" size="26.0" />
                      </font>
                   </Label>
-                  <JFXButton fx:id="updateButton" buttonType="RAISED" layoutX="207.0" layoutY="60.0" text="Change">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@css/exchange.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <JFXButton fx:id="ExportButton" layoutX="312.0" layoutY="60.0" text="Export Data">
+                  <JFXButton fx:id="ExportButton" buttonType="RAISED" layoutX="117.0" layoutY="60.0" text="Export Data">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -45,7 +33,7 @@
                         <Font size="16.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="14.0" layoutY="60.0" text="Add">
+                  <JFXButton fx:id="addButton" buttonType="RAISED" layoutX="14.0" layoutY="60.0" onAction="#addNewStudent" text="Add">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -57,14 +45,14 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton layoutX="104.0" layoutY="60.0" text="Delete">
+                  <JFXButton fx:id="refreshButton" buttonType="RAISED" layoutX="276.0" layoutY="60.0" onAction="#refreshDB" text="Refresh">
                      <font>
                         <Font size="16.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@css/icons8-delete-240.png" />
+                              <Image url="@css/refresh.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -83,7 +71,7 @@
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                      </left>
                      <center>
-                        <JFXButton fx:id="ExitButton" style="-fx-background-color: #76b5c5;" text="Exit" BorderPane.alignment="CENTER">
+                        <JFXButton fx:id="ExitButton" onAction="#ExitWindow" style="-fx-background-color: #76b5c5;" text="Exit" BorderPane.alignment="CENTER">
                            <font>
                               <Font size="30.0" />
                            </font>
@@ -96,7 +84,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <TableView fx:id="approvedStudentTable" layoutX="-1.0" prefHeight="481.0" prefWidth="954.0">
+                  <TableView fx:id="approvedStudentTable" layoutX="-1.0" prefHeight="481.0" prefWidth="954.0" style="-fx-font-size: 15px;">
                     <columns>
                       <TableColumn fx:id="student_ID" prefWidth="123.0" text="Student's ID" />
                       <TableColumn fx:id="student_Name" prefWidth="216.0" text="Student's Name" />
