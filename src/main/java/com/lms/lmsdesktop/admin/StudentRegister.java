@@ -11,28 +11,18 @@ import java.net.URL;
 
 public class StudentRegister extends Application {
     @Override
-    public void start(Stage primaryStage) throws IOException {
-        // Load the FXML file from the specified path
-        URL fxmlUrl = getClass().getResource("student-register-view.fxml");
-        if (fxmlUrl == null) {
-            // Handle error gracefully
-            throw new IOException("FXML file not found");
+    public void start(Stage primaryStage) throws Exception {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("approved-students-view.fxml"));
+            Parent root = loader.load();
+            ApprovedStudentsController controller = loader.getController();
+            System.out.println("Controller: " + controller); // Debugging statement
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-        FXMLLoader loader = new FXMLLoader(fxmlUrl);
-        Parent root = loader.load();
-
-        // Set up the scene and show the stage
-        Scene scene = new Scene(root);
-        primaryStage.setResizable(false);
-
-//        // Add the CSS file to the scene
-//        URL cssUrl = getClass().getResource("css/AdminLanding.css");
-//        scene.getStylesheets().add(cssUrl.toExternalForm());
-
-        primaryStage.setTitle("Student Registration");
-        primaryStage.setScene(scene);
-        primaryStage.show();
     }
 
 

@@ -268,7 +268,7 @@
                               </ImageView>
                            </center>
                            <bottom>
-                              <JFXButton fx:id="studentData" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Student Data" BorderPane.alignment="CENTER">
+                              <JFXButton fx:id="studentData" onAction="#openStudentRegister" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Student Data" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font name="Bell MT Bold" size="27.0" />
                                  </font>

@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -76,5 +77,19 @@ public class AdminPanelController implements Initializable {
                 MenuClose.setVisible(false);
             });
         });
+    }
+
+    @FXML
+    public void openStudentRegister(ActionEvent event) throws IOException {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/lms/lmsdesktop/admin/student-register-view.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
