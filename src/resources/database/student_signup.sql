@@ -18,6 +18,33 @@ USE `student_signup`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `course`
+--
+
+DROP TABLE IF EXISTS `course`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `course` (
+  `course_serial` int NOT NULL AUTO_INCREMENT,
+  `course_code` varchar(45) NOT NULL,
+  `course_name` varchar(45) DEFAULT NULL,
+  `course_section` varchar(45) NOT NULL,
+  `course_section_faculty_ID` varchar(45) NOT NULL,
+  PRIMARY KEY (`course_serial`,`course_code`,`course_section`,`course_section_faculty_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `course`
+--
+
+LOCK TABLES `course` WRITE;
+/*!40000 ALTER TABLE `course` DISABLE KEYS */;
+INSERT INTO `course` VALUES (3,'121','ENG','C','5');
+/*!40000 ALTER TABLE `course` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `department`
 --
 
@@ -50,10 +77,10 @@ DROP TABLE IF EXISTS `faculty_table`;
 CREATE TABLE `faculty_table` (
   `faculty_serial_id` int NOT NULL AUTO_INCREMENT,
   `faculty_email` varchar(100) NOT NULL,
-  `faculy_name` varchar(100) DEFAULT NULL,
+  `faculty_name` varchar(100) DEFAULT NULL,
   `faculty_password` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`faculty_serial_id`,`faculty_email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,6 +89,7 @@ CREATE TABLE `faculty_table` (
 
 LOCK TABLES `faculty_table` WRITE;
 /*!40000 ALTER TABLE `faculty_table` DISABLE KEYS */;
+INSERT INTO `faculty_table` VALUES (5,'asd@gmail.com','ASD','213123');
 /*!40000 ALTER TABLE `faculty_table` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -130,4 +158,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-02 23:49:04
+-- Dump completed on 2023-05-03  2:38:59
