@@ -81,7 +81,7 @@ CREATE TABLE `lms_data` (
   `course_send_notification` enum('yes','no') DEFAULT NULL,
   `course_notes` varchar(2000) DEFAULT NULL,
   PRIMARY KEY (`course_id`,`course_section`)
-) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=108 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +90,7 @@ CREATE TABLE `lms_data` (
 
 LOCK TABLES `lms_data` WRITE;
 /*!40000 ALTER TABLE `lms_data` DISABLE KEYS */;
-INSERT INTO `lms_data` VALUES (104,'ICS','A','2023-04-04 00:00:00','Homework: 4.5 to 4.9 everything.','yes','I need to check them later.');
+INSERT INTO `lms_data` VALUES (104,'ICS','A','2023-04-04 00:00:00','Homework: 4.5 to 4.9 everything.','yes','I need to check them later.'),(107,'ICS','A','2023-04-28 00:00:00','Lab test Final. Syllabus: Arrays','yes','I need to prepare the questions');
 /*!40000 ALTER TABLE `lms_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,6 +106,7 @@ CREATE TABLE `student_signup_table` (
   `student_name` varchar(45) DEFAULT NULL,
   `student_id` varchar(45) NOT NULL,
   `student_password` varchar(45) DEFAULT NULL,
+  `student_status` tinyint DEFAULT NULL,
   PRIMARY KEY (`student_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -116,7 +117,7 @@ CREATE TABLE `student_signup_table` (
 
 LOCK TABLES `student_signup_table` WRITE;
 /*!40000 ALTER TABLE `student_signup_table` DISABLE KEYS */;
-INSERT INTO `student_signup_table` VALUES ('ikhan201142@bscse.uiu.ac.bd','Israt Jahan Khan','011201142','5555'),('mamin201158@bscse.uiu.ac.bd','Md. Fahim Bin Amin','011201158','1111');
+INSERT INTO `student_signup_table` VALUES ('asdas','fahim','011201142','12213',0),('fahimbin@gmail.com','Fahim','011201143','asdasd2wr',0),('fa@gmail.com','watgaga','011201145','asdasfas',1),('qawfa2423','asdas','011201148','t346',0),('f2ahim@gmail.com','as5t23w','0112011492','sdgfsd',1),('fahim23@gmail.com','fahim','011201158','a234',1),('235423','asdetg','011201160','sadasd',1),('asfaa','asdas','011201162','asdasd',0),('atasefa','asdasd','011201190','asdfasd',1),('adga','asda','123213','adsasd',0);
 /*!40000 ALTER TABLE `student_signup_table` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -129,4 +130,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-25  2:35:43
+-- Dump completed on 2023-05-02 23:49:04
