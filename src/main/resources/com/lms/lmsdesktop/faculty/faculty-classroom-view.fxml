@@ -77,7 +77,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="138.0" layoutY="172.0" onAction="#deleteSelectedContent" text="Delete">
+                  <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="275.0" layoutY="172.0" onAction="#deleteSelectedContent" text="Delete">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -85,6 +85,18 @@
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@css/icons8-delete-240.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="updateButton" buttonType="RAISED" layoutX="132.0" layoutY="172.0" onAction="#openUpdateButton" text="Update">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@css/edit.png" />
                            </image>
                         </ImageView>
                      </graphic>

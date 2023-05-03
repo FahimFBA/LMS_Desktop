@@ -52,6 +52,11 @@ public class NewDataAddController {
     private static final String DB_USER = "root";
     private static final String DB_PASS = "root";
 
+    private FacultyClassroomController facultyClassroomController;
+
+    public void setFacultyClassroomController(FacultyClassroomController facultyClassroomController) {
+        this.facultyClassroomController = facultyClassroomController;
+    }
 
     public void setCourseInfo(String courseName, String courseSection) {
         this.courseName = courseName;
@@ -75,6 +80,11 @@ public class NewDataAddController {
 
             preparedStatement.executeUpdate();
 
+            // Update the table in the FacultyClassroomController
+            if (facultyClassroomController != null) {
+                facultyClassroomController.loadTableData();
+            }
+
             // Close the window after saving the data
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.close();
@@ -86,7 +96,12 @@ public class NewDataAddController {
 
     @FXML
     void ExitWindow(ActionEvent event) {
-        Stage stage = (Stage) Exit.getScene().getWindow();
+
+        if (facultyClassroomController != null) {
+            facultyClassroomController.loadTableData();
+        }
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.close();
+
     }
 }

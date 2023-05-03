@@ -19,7 +19,7 @@
             <Image url="@css/joanna-kosinska-1_CMoFsPfso-unsplash.jpg" />
          </image>
       </ImageView>
-      <JFXButton fx:id="Home" buttonType="RAISED" layoutX="14.0" layoutY="14.0" onAction="#Home" text="Home">
+      <JFXButton fx:id="Home" buttonType="RAISED" layoutX="14.0" layoutY="14.0" onAction="#handleHomeButtonAction" text="Home">
          <font>
             <Font name="System Bold" size="38.0" />
          </font>
@@ -47,7 +47,7 @@
             </RadialGradient>
          </ripplerFill>
       </JFXButton>
-      <Label layoutX="1152.0" layoutY="430.0" text="User Name">
+      <Label layoutX="1152.0" layoutY="430.0" text="User Email">
          <font>
             <Font name="Bell MT Bold" size="42.0" />
          </font>
@@ -57,17 +57,17 @@
             <Font name="Bell MT Bold" size="42.0" />
          </font>
       </Label>
-      <TextField layoutX="1392.0" layoutY="424.0" prefHeight="75.0" prefWidth="401.0">
+      <TextField fx:id="Email" layoutX="1392.0" layoutY="424.0" prefHeight="75.0" prefWidth="401.0">
          <font>
             <Font name="Bell MT" size="35.0" />
          </font>
       </TextField>
-      <PasswordField layoutX="1392.0" layoutY="571.0" prefHeight="48.0" prefWidth="401.0">
+      <PasswordField fx:id="password" layoutX="1392.0" layoutY="571.0" prefHeight="48.0" prefWidth="401.0">
          <font>
             <Font size="35.0" />
          </font>
       </PasswordField>
-      <JFXButton buttonType="RAISED" layoutX="1473.0" layoutY="718.0" text="Submit">
+      <JFXButton fx:id="submitButton" buttonType="RAISED" layoutX="1473.0" layoutY="718.0" onAction="#handleSubmitButtonAction" onMouseClicked="#Submit" text="Submit">
          <font>
             <Font name="Bell MT" size="33.0" />
          </font>
