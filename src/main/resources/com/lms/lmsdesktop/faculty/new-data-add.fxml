@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXCheckBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="597.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.NewDataAddController">
+<AnchorPane prefHeight="597.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.NewDataAddController">
    <children>
-      <BorderPane layoutX="160.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane layoutX="160.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #95d9e2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <Label text="Update Course Content" underline="true" BorderPane.alignment="CENTER">
                <font>
@@ -52,7 +46,10 @@
                                           <Font size="32.0" />
                                        </font>
                                     </Label>
-                                    <JFXCheckBox fx:id="notification_checkbox" layoutX="344.0" layoutY="171.0" prefHeight="43.0" prefWidth="367.0" />
+                                    <JFXCheckBox fx:id="notification_checkbox" layoutX="344.0" layoutY="171.0" prefHeight="43.0" prefWidth="367.0" text="On/Off">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font></JFXCheckBox>
                                     <Label layoutX="82.0" layoutY="236.0" text="Notes">
                                        <font>
                                           <Font size="32.0" />

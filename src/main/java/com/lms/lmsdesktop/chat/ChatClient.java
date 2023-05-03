@@ -38,6 +38,11 @@ public class ChatClient extends Application {
             e.printStackTrace();
         }
     }
+    public void openChatWindow(Stage chatStage, Stage mainStage) {
+        chatStage.initOwner(mainStage);
+        chatStage.show();
+    }
+
 
     public static void main(String[] args) {
         launch(args);

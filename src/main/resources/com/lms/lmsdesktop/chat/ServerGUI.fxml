@@ -10,7 +10,7 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.chat.ServerController">
     <children>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #abdbe3;" VBox.vgrow="ALWAYS">
             <children>
                 <TextArea fx:id="txtAreaChatMsg" editable="false" layoutX="14.0" layoutY="60.0" prefHeight="190.0" prefWidth="296.0" wrapText="true" />
                 <Label layoutX="21.0" layoutY="14.0" prefHeight="17.0" prefWidth="67.0" text="Server App" />

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="597.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.NewDataEditController">
+<AnchorPane prefHeight="597.0" prefWidth="848.0" style="-fx-background-color: #95d9e2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.NewDataEditController">
    <children>
       <BorderPane layoutX="160.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -52,7 +52,10 @@
                                           <Font size="32.0" />
                                        </font>
                                     </Label>
-                                    <JFXCheckBox fx:id="notification_checkbox" layoutX="344.0" layoutY="171.0" prefHeight="43.0" prefWidth="367.0" />
+                                    <JFXCheckBox fx:id="notification_checkbox" layoutX="344.0" layoutY="171.0" prefHeight="43.0" prefWidth="367.0" text="On/Off">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font></JFXCheckBox>
                                     <Label layoutX="82.0" layoutY="236.0" text="Notes">
                                        <font>
                                           <Font size="32.0" />

@@ -12,7 +12,7 @@
    <children>
       <BorderPane layoutX="382.0" layoutY="168.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <AnchorPane prefHeight="103.0" prefWidth="878.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="103.0" prefWidth="878.0" style="-fx-background-color: #1280b5;" BorderPane.alignment="CENTER">
                <children>
                   <Label layoutX="257.0" layoutY="30.0" text="Add New Student Data">
                      <font>
@@ -25,7 +25,7 @@
          <bottom>
             <AnchorPane prefHeight="67.0" prefWidth="878.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton fx:id="ExitButton" buttonType="RAISED" layoutX="417.0" layoutY="18.0" onAction="#exitWindow" text="Exit">
+                  <JFXButton fx:id="ExitButton" buttonType="RAISED" layoutX="417.0" layoutY="18.0" onAction="#exitWindow" style="-fx-background-color: #21130d;" text="Exit" textFill="#f5f5f5">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -34,7 +34,7 @@
             </AnchorPane>
          </bottom>
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f2b66e;" BorderPane.alignment="CENTER">
                <children>
                   <Label layoutX="166.0" layoutY="56.0" text="Student's ID">
                      <font>
@@ -86,7 +86,7 @@
                         <Font size="18.0" />
                      </font>
                   </JFXCheckBox>
-                  <JFXButton fx:id="saveToDB_Button" buttonType="RAISED" layoutX="411.0" layoutY="408.0" onAction="#SaveToDB" text="Save">
+                  <JFXButton fx:id="saveToDB_Button" buttonType="RAISED" layoutX="411.0" layoutY="408.0" onAction="#SaveToDB" style="-fx-background-color: #095f9a;" text="Save" textFill="WHITE">
                      <font>
                         <Font size="17.0" />
                      </font>

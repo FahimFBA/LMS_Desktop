@@ -6,6 +6,7 @@ module com.lms.lmsdesktop {
     requires javafx.media;
     requires org.apache.poi.poi;
     requires org.apache.poi.ooxml;
+    requires java.desktop;
 
 
     opens com.lms.lmsdesktop to javafx.fxml;
