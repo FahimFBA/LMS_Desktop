@@ -50,6 +50,9 @@ public class FacultyClassroomController {
     private JFXButton loadButton;
 
     @FXML
+    private JFXButton updateButton;
+
+    @FXML
     private TableView<CourseContent> contentTable;
 
 
@@ -67,14 +70,53 @@ public class FacultyClassroomController {
     @FXML
     private TableColumn<CourseContent, String> table_notes;
 
+    // Add this variable at the beginning of the class
+    private static FacultyClassroomController instance;
+
     private static final String DB_URL = "jdbc:mysql://localhost:3306/student_signup";
     private static final String DB_USER = "root";
     private static final String DB_PASS = "root";
+    public static FacultyClassroomController getInstance() {
+        return instance;
+    }
 
     @FXML
     public void initialize() {
+        instance = this; // Add this line
+        sectionDropMenu.setVisible(false); // Initially hide the sectionDropMenu
+        courseNameDropMenu.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                sectionDropMenu.setVisible(true);
+                loadSectionsForCourse(newValue); // Load sections relevant to the selected course
+            } else {
+                sectionDropMenu.setVisible(false);
+            }
+        });
         loadCourseNamesAndSections();
         configureTableColumns();
+    }
+    private void loadSectionsForCourse(String courseName) {
+        sectionDropMenu.getItems().clear(); // Clear previous section items
+        try {
+            Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "SELECT DISTINCT course_section FROM lms_data WHERE course_name = ?");
+            preparedStatement.setString(1, courseName);
+            ResultSet courseSectionResultSet = preparedStatement.executeQuery();
+
+            while (courseSectionResultSet.next()) {
+                sectionDropMenu.getItems().add(courseSectionResultSet.getString("course_section"));
+            }
+
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void refreshTableData() {
+        loadTableData();
     }
 
     private void loadCourseNamesAndSections() {
@@ -98,6 +140,8 @@ public class FacultyClassroomController {
         }
     }
 
+
+
     private void configureTableColumns() {
         table_date.setCellValueFactory(new PropertyValueFactory<>("date"));
         table_content.setCellValueFactory(new PropertyValueFactory<>("content"));
@@ -108,40 +152,30 @@ public class FacultyClassroomController {
         table_notes.setCellFactory(TextFieldTableCell.forTableColumn());
     }
 
-    private void loadTableData() {
-        String selectedCourseName = courseNameDropMenu.getValue();
-        String selectedCourseSection = sectionDropMenu.getValue();
+    public void loadTableData() {
+        contentTable.getItems().clear();
+        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
+             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM lms_data WHERE course_name = ? AND course_section = ?")) {
 
-        if (selectedCourseName == null || selectedCourseSection == null) {
-            return;
-        }
+            preparedStatement.setString(1, courseNameDropMenu.getValue());
+            preparedStatement.setString(2, sectionDropMenu.getValue());
 
-        try {
-            Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            PreparedStatement preparedStatement = connection.prepareStatement(
-                    "SELECT * FROM lms_data WHERE course_name = ? AND course_section = ?");
-            preparedStatement.setString(1, selectedCourseName);
-            preparedStatement.setString(2, selectedCourseSection);
-
-            ObservableList<CourseContent> data = FXCollections.observableArrayList();
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-                data.add(new CourseContent(
-                        resultSet.getString("course_content_date"),
-                        resultSet.getString("course_content_data"),
-                        resultSet.getBoolean("course_send_notification"),
-                        resultSet.getString("course_notes")
-                ));
+                String courseContentDate = resultSet.getString("course_content_date");
+                String courseContentData = resultSet.getString("course_content_data");
+                Boolean sendNotification = resultSet.getBoolean("course_send_notification");
+                String notes = resultSet.getString("course_notes");
+
+                CourseContent courseContent = new CourseContent(courseContentDate, courseContentData, sendNotification, notes);
+                contentTable.getItems().add(courseContent);
             }
-
-            contentTable.setItems(data);
-
-            connection.close();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
 
     @FXML
     void loadButtonClicked(ActionEvent event) {
@@ -163,13 +197,18 @@ public class FacultyClassroomController {
         if (selectedContent != null) {
             try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
                  PreparedStatement preparedStatement = connection.prepareStatement(
-                         "DELETE FROM lms_data WHERE course_content_date = ? AND course_content_data = ?")) {
+                         "DELETE FROM lms_data WHERE course_content_date = ? AND course_content_data = ? AND course_name = ? AND course_section = ?")) {
 
                 preparedStatement.setString(1, selectedContent.getDate());
                 preparedStatement.setString(2, selectedContent.getContent());
+                preparedStatement.setString(3, courseNameDropMenu.getValue());
+                preparedStatement.setString(4, sectionDropMenu.getValue());
 
                 preparedStatement.executeUpdate();
-                contentTable.getItems().remove(selectedContent);
+
+                // Refresh the table data after deleting the row
+                loadTableData();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -183,6 +222,7 @@ public class FacultyClassroomController {
             Parent root = loader.load();
             NewDataAddController newDataAddController = loader.getController();
             newDataAddController.setCourseInfo(courseName, courseSection);
+            newDataAddController.setFacultyClassroomController(this); // Set the reference to the FacultyClassroomController instance
 
             Scene scene = new Scene(root);
             Stage stage = new Stage();
@@ -192,6 +232,8 @@ public class FacultyClassroomController {
             e.printStackTrace();
         }
     }
+
+
 
 
     @FXML
@@ -234,6 +276,27 @@ public class FacultyClassroomController {
         }
     }
 
+    @FXML
+    void openUpdateButton() {
+        CourseContent selectedContent = contentTable.getSelectionModel().getSelectedItem();
+        if (selectedContent != null) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("new-data-edit.fxml"));
+                Parent root = loader.load();
+                NewDataEditController newDataEditController = loader.getController();
+                newDataEditController.setCourseInfo(courseNameDropMenu.getValue(), sectionDropMenu.getValue());
+                newDataEditController.setExistingContent(selectedContent);
+                newDataEditController.setFacultyClassroomController(this);
+
+                Scene scene = new Scene(root);
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 
 

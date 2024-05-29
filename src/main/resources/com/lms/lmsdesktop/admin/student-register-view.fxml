@@ -46,7 +46,7 @@
                         </ImageView>
                      </center>
                      <bottom>
-                        <JFXButton buttonType="RAISED" ripplerFill="#a44b4b" style="-fx-background-color: #84d6e2; -fx-cursor: hand;" text="Needs Approval" BorderPane.alignment="CENTER">
+                        <JFXButton fx:id="RegisterNewStudentButton" buttonType="RAISED" onAction="#openStudentRegister" prefHeight="44.0" prefWidth="204.0" ripplerFill="#a44b4b" style="-fx-background-color: #84d6e2; -fx-cursor: hand;" text="Register Students" BorderPane.alignment="CENTER">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -62,7 +62,7 @@
                         </ImageView>
                      </center>
                      <bottom>
-                        <JFXButton buttonType="RAISED" style="-fx-background-color: #84d6e2; -fx-cursor: hand;" text="Approved Users" BorderPane.alignment="CENTER">
+                        <JFXButton fx:id="approvedStudentButton" buttonType="RAISED" onAction="#openApprovedStudentWindow" prefHeight="44.0" prefWidth="204.0" style="-fx-background-color: #84d6e2; -fx-cursor: hand;" text="Approved Students" BorderPane.alignment="CENTER">
                            <font>
                               <Font size="20.0" />
                            </font>

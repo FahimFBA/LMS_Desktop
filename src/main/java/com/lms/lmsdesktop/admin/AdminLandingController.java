@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -55,7 +56,20 @@ public class AdminLandingController implements Initializable {
         String Admin_ID = admin_user_id.getText();
         String Admin_Pass = admin_pass.getText();
         if (Admin_ID.equals("admin") && Admin_Pass.equals("admin")) {
-            System.out.println("Login Successful");
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/lms/lmsdesktop/admin/admin-panel-view.fxml"));
+                Parent googleMeetView = fxmlLoader.load();
+                Scene scene = new Scene(googleMeetView);
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.setTitle("Admin Panel");
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.show();
+                // hide the current window.
+                ((Node) (event.getSource())).getScene().getWindow().hide();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         } else {
             System.out.println("Login Failed");
         }

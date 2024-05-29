@@ -31,11 +31,11 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <TextField layoutX="763.0" layoutY="268.0" prefHeight="40.0" prefWidth="176.0" />
-      <PasswordField layoutX="763.0" layoutY="331.0" prefHeight="40.0" prefWidth="176.0" />
+      <TextField fx:id="id" layoutX="763.0" layoutY="268.0" prefHeight="40.0" prefWidth="176.0" />
+      <PasswordField fx:id="pass" layoutX="763.0" layoutY="331.0" prefHeight="40.0" prefWidth="176.0" />
       <Button fx:id="home" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#home" text="Home" />
       <Button layoutX="105.0" layoutY="14.0" mnemonicParsing="false" text="All Course " />
       <Button layoutX="210.0" layoutY="14.0" mnemonicParsing="false" text="Course Search" />
-      <Button layoutX="824.0" layoutY="421.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="submit" layoutX="824.0" layoutY="421.0" mnemonicParsing="false" onAction="#login" text="Submit" />
    </children>
 </AnchorPane>

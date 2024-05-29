@@ -37,22 +37,10 @@
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Label>
-                        <JFXButton layoutX="1747.0" layoutY="12.0" text="Chat!" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold Italic" size="13.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@img/icons8-chat-94.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </JFXButton>
                      </children></Pane>
                   <HBox layoutX="225.0" layoutY="55.0" prefHeight="50.0" prefWidth="1099.0" style="-fx-background-color: #873e23;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
                      <children>
-                        <JFXButton prefHeight="50.0" prefWidth="183.0" text="Dashboard" textFill="WHITE">
+                        <JFXButton prefHeight="50.0" prefWidth="214.0" text="Dashboard" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -74,7 +62,7 @@
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton prefHeight="50.0" prefWidth="139.0" text="UCAM" textFill="WHITE">
+                        <JFXButton fx:id="ucam" onAction="#openBrowserUCAM" prefHeight="50.0" prefWidth="139.0" text="UCAM" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -85,18 +73,7 @@
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton prefHeight="50.0" prefWidth="187.0" text="Course Search" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@img/icons8-search-1500.png" />
-                                 </image></ImageView>
-                           </graphic>
-                        </JFXButton>
-                        <JFXButton prefHeight="50.0" prefWidth="157.0" text="Calculator" textFill="WHITE">
+                        <JFXButton fx:id="calculator" onAction="#openCalculator" prefHeight="50.0" prefWidth="157.0" text="Calculator" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -185,7 +162,7 @@
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" styleClass="sidebarItem" text="UCAM" textFill="WHITE">
+                        <JFXButton fx:id="sliderUcam" alignment="BASELINE_LEFT" onAction="#openBrowserUCAM" prefHeight="52.0" prefWidth="177.0" styleClass="sidebarItem" text="UCAM" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -207,7 +184,7 @@
                                  </image></ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton alignment="BASELINE_LEFT" prefHeight="52.0" prefWidth="177.0" styleClass="sidebarItem" text="Calculator" textFill="WHITE">
+                        <JFXButton fx:id="sliderCalculator" alignment="BASELINE_LEFT" onAction="#openCalculator" prefHeight="52.0" prefWidth="177.0" styleClass="sidebarItem" text="Calculator" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -268,7 +245,7 @@
                               </ImageView>
                            </center>
                            <bottom>
-                              <JFXButton fx:id="studentData" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Student Data" BorderPane.alignment="CENTER">
+                              <JFXButton fx:id="studentData" onAction="#openStudentRegister" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Student Data" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font name="Bell MT Bold" size="27.0" />
                                  </font>
@@ -284,7 +261,7 @@
                               </ImageView>
                            </center>
                            <bottom>
-                              <JFXButton fx:id="facultyData" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Faculty Data" BorderPane.alignment="CENTER">
+                              <JFXButton fx:id="facultyData" onAction="#openFacultyData" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Faculty Data" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font name="Bell MT Bold" size="27.0" />
                                  </font>
@@ -322,7 +299,7 @@
                               </ImageView>
                            </center>
                            <bottom>
-                              <JFXButton fx:id="privateFiles" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Private Files" BorderPane.alignment="CENTER">
+                              <JFXButton fx:id="privateFiles" onAction="#openFileChooser" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #9ef6f7; -fx-cursor: hand;" text="Private Files" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font name="Bell MT Bold" size="27.0" />
                                  </font>

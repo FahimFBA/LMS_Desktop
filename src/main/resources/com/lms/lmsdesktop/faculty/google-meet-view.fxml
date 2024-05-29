@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.MeetScreenController">
+<AnchorPane prefHeight="400.0" prefWidth="573.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.MeetScreenController">
    <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(202,236,235,255);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <Label text="Customize Google Meet Link" BorderPane.alignment="CENTER">
                <font>
@@ -30,9 +30,9 @@
                               <Font size="19.0" />
                            </font>
                         </Label>
-                        <Label layoutX="303.0" layoutY="35.0" text="Current Meet Link">
+                        <Label layoutX="308.0" layoutY="33.0" text="gkt-kxuw-qmd">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="18.0" />
                            </font>
                         </Label>
                      </children>
@@ -61,7 +61,7 @@
                               <Font size="18.0" />
                            </font>
                         </TextField>
-                        <JFXButton layoutX="511.0" layoutY="89.0" ripplerFill="#b22929" text="Open">
+                        <JFXButton fx:id="openLink" buttonType="RAISED" layoutX="260.0" layoutY="176.0" onAction="#openBrowserMeet" ripplerFill="#b22929" text="Open">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -69,6 +69,9 @@
                                  </image>
                               </ImageView>
                            </graphic>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
                         </JFXButton>
                      </children>
                   </AnchorPane>

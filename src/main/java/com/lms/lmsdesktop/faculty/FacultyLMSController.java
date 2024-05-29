@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -34,6 +35,9 @@ public class FacultyLMSController implements Initializable {
 
     @FXML
     private JFXButton calculator;
+    @FXML
+    private JFXButton cits;
+
 
     @FXML
     private JFXButton calculatorFromSlider;
@@ -137,6 +141,16 @@ public class FacultyLMSController implements Initializable {
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void openBrowserCITS() {
+        try {
+            URI uri = new URI("mailto:cits@uiu.ac.bd");
+            java.awt.Desktop.getDesktop().browse(uri);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

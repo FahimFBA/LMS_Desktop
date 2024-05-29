@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.admin.ChangeFacultyDataNewController">
+   <children>
+      <BorderPane layoutX="382.0" layoutY="168.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="103.0" prefWidth="878.0" style="-fx-background-color: #0e77b0;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="262.0" layoutY="30.0" text="Add The Faculty Data">
+                     <font>
+                        <Font name="Bell MT Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="67.0" prefWidth="878.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="ExitButton" buttonType="RAISED" layoutX="417.0" layoutY="18.0" style="-fx-background-color: #a0d4e2;" text="Exit">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffcb91;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="161.0" layoutY="59.0" text="Faculty's Name">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="164.0" layoutY="129.0" text="Faculty's Email">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="161.0" layoutY="192.0" text="Faculty's Password">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="161.0" layoutY="246.0" text="Course Code">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="name" layoutX="488.0" layoutY="55.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton fx:id="saveToDB_Button" buttonType="RAISED" layoutX="411.0" layoutY="408.0" onAction="#SaveToDB" style="-fx-background-color: #4f371f;" text="Save" textFill="#f2f2f2">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="158.0" layoutY="303.0" text="Course Name">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="162.0" layoutY="357.0" text="Course Section">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="email" layoutX="488.0" layoutY="125.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="password" layoutX="488.0" layoutY="188.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="code" layoutX="488.0" layoutY="242.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="course_name" layoutX="488.0" layoutY="299.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="section" layoutX="488.0" layoutY="353.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

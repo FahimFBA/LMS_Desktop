@@ -24,13 +24,9 @@ public class StudentRegister extends Application {
 
         // Set up the scene and show the stage
         Scene scene = new Scene(root);
-        primaryStage.setResizable(false);
 
-//        // Add the CSS file to the scene
-//        URL cssUrl = getClass().getResource("css/AdminLanding.css");
-//        scene.getStylesheets().add(cssUrl.toExternalForm());
 
-        primaryStage.setTitle("Student Registration");
+        primaryStage.setTitle("Student Register");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

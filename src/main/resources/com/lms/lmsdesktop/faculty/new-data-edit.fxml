@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="597.0" prefWidth="848.0" style="-fx-background-color: #95d9e2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.lmsdesktop.faculty.NewDataEditController">
+   <children>
+      <BorderPane layoutX="160.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="Update Course Content" underline="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Book Antiqua Bold" size="33.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane layoutX="351.0" layoutY="35.0" prefHeight="519.0" prefWidth="848.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+                     <center>
+                        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane prefHeight="522.0" prefWidth="848.0">
+                                 <children>
+                                    <Label layoutX="82.0" layoutY="19.0" text="Date">
+                                       <font>
+                                          <Font size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="date" layoutX="344.0" layoutY="21.0" prefHeight="43.0" prefWidth="367.0" />
+                                    <Label layoutX="81.0" layoutY="93.0" text="Course Content">
+                                       <font>
+                                          <Font size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="course_content" layoutX="344.0" layoutY="87.0" prefHeight="43.0" prefWidth="367.0">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="82.0" layoutY="169.0" text="Notification">
+                                       <font>
+                                          <Font size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXCheckBox fx:id="notification_checkbox" layoutX="344.0" layoutY="171.0" prefHeight="43.0" prefWidth="367.0" text="On/Off">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font></JFXCheckBox>
+                                    <Label layoutX="82.0" layoutY="236.0" text="Notes">
+                                       <font>
+                                          <Font size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="notes" layoutX="344.0" layoutY="231.0" prefHeight="43.0" prefWidth="367.0">
+                                       <font>
+                                          <Font size="28.0" />
+                                       </font>
+                                    </TextField>
+                                   
+                                    <Label layoutX="82.0" layoutY="317.0" text="Upload file">
+                                       <font>
+                                          <Font size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXButton fx:id="filePicker" layoutX="344.0" layoutY="317.0" prefHeight="43.0" prefWidth="367.0" style="-fx-cursor: hand;" text="Choose file">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@css/icons8-add-file-94.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="Exit" buttonType="RAISED" layoutX="82.0" layoutY="446.0" onAction="#ExitWindow" prefHeight="46.0" prefWidth="112.0" style="-fx-background-color: #76b5c5;" text="Exit">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@css/icons8-close-94.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="Save" buttonType="RAISED" layoutX="599.0" layoutY="446.0" onAction="#saveData" prefHeight="46.0" prefWidth="112.0" style="-fx-background-color: #76b5c5;" text="Save">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@css/icons8-save-as-94.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></JFXButton>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+                  <Label fx:id="course_name_label" layoutX="87.0" layoutY="15.0" text="Course Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="course_section_label" layoutX="581.0" layoutY="16.0" text="Section">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
