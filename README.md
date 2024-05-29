@@ -16,6 +16,8 @@ A desktop application that lets the faculties, students and admin to interact wi
 - Everyone gets secured personal storage
 - Has nice calculator application in it that can be detached and use separately as well.
 
+## Installation
+
 
 
 **For Server, `ChatServer.java`. For Client, `ChatClient.java`.**
@@ -24,8 +26,9 @@ A desktop application that lets the faculties, students and admin to interact wi
 
 ## Screenshots
 
+- Main LandingPage/Homepage
 
-
+![main landing page](./img/landing.png)
 
 ## Team Members
 
