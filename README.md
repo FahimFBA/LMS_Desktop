@@ -38,6 +38,14 @@ A desktop application that lets the faculties, students and admin to interact wi
 
 ![faculty portal homepage](./img/facultyportal.png)
 
+- Admin Portal's LandingPage/Homepage
+
+![admin portal homepage](./img/adminportal.png)
+
+- Wrong Credentials (separate warning window)
+
+![wrong credentials](./img/wrong_credentials.png)
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
