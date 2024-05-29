@@ -30,6 +30,10 @@ A desktop application that lets the faculties, students and admin to interact wi
 
 ![main landing page](./img/landing.png)
 
+- Student Portal's LandingPage/Homepage
+
+![student portal homepage](./img/studentportal.png)
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
