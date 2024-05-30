@@ -50,6 +50,10 @@ A desktop application that lets the faculties, students and admin to interact wi
 
 ![faculty lms during hidden sidebar](./img/facultylms_hiddensidebar.png)
 
+- Faculty LMS (During enabled sidebar)
+
+![faculty lms during enabled sidebar](./img/facultylms_enabledsidebar.png)
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
