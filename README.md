@@ -114,6 +114,10 @@ https://github.com/FahimFBA/LMS_Desktop/assets/64195132/6cc338b8-5e07-4ffd-943a-
 
 https://github.com/FahimFBA/LMS_Desktop/assets/64195132/48281266-36c2-4a76-af8b-b4d5844db7f7
 
+- Admin Handles Faculties
+
+https://github.com/FahimFBA/LMS_Desktop/assets/64195132/67de0afd-cbd0-4e67-b619-d2b0774fedd3
+
 
 ## Team Members
 
