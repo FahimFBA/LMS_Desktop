@@ -72,6 +72,11 @@ https://github.com/FahimFBA/LMS_Desktop/assets/64195132/b3bf25b0-d1be-4062-9579-
 
 https://github.com/FahimFBA/LMS_Desktop/assets/64195132/6fc0b8cf-65db-45d6-a54c-a116eec88aa6
 
+
+- Faculty Slider
+
+https://github.com/FahimFBA/LMS_Desktop/assets/64195132/148df098-499e-47b6-bc29-32fffdaf92a5
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
