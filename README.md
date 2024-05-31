@@ -88,6 +88,11 @@ https://github.com/FahimFBA/LMS_Desktop/assets/64195132/daf16b3e-811d-4cf7-a29c-
 
 The `.xlsx` file generated in the above video is right [here](./eventLogs/eventLogs_2024-05-31-11-30-33.xlsx).
 
+
+- Student Signup
+
+![studentsignup](./img/studentsignup.png)
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
