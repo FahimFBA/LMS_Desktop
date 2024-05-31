@@ -93,6 +93,13 @@ The `.xlsx` file generated in the above video is right [here](./eventLogs/eventL
 
 ![studentsignup](./img/studentsignup.png)
 
+- Student Signup Successful Window
+
+This window gets displayed if the user's new account gets created successfully.
+
+https://github.com/FahimFBA/LMS_Desktop/assets/64195132/2a299a68-2f96-48e3-b6b1-2f140073848b
+
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
