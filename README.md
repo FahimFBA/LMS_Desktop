@@ -64,7 +64,7 @@ A desktop application that lets the faculties, students and admin to interact wi
 
 ![update course content 2](./img/update2.png)
 
-- Faculty Course Content Add
+- Faculty Course Content Add (I purposely added some gibberish content here. Don't worry! In the next step, I will delete them, and I will also show you whether the delete content feature is working or not!)
 
 https://github.com/FahimFBA/LMS_Desktop/assets/64195132/b3bf25b0-d1be-4062-9579-28e16acc01fb
 
