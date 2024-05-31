@@ -1,4 +1,4 @@
-# LMS Desktop (Team: The Trio)
+# LMS Desktop
 
 A desktop application that lets the faculties, students and admin to interact with their privilege and responsibilities.
 
