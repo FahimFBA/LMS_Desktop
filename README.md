@@ -64,6 +64,10 @@ A desktop application that lets the faculties, students and admin to interact wi
 
 ![update course content 2](./img/update2.png)
 
+- Faculty Course Content Delete
+
+https://github.com/FahimFBA/LMS_Desktop/assets/64195132/6fc0b8cf-65db-45d6-a54c-a116eec88aa6
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
