@@ -35,6 +35,14 @@ A desktop application that lets the faculties, students and admin to interact wi
 - Run `src/main/java/com/lms/lmsdesktop/MainApplication.java` to launch the application.
 - Have fun!
 
+## Technologies
+
+- Java
+- JavaFX
+- A little bit of CSS
+- MySQL Database
+
+
 ## Screenshots
 
 - Main LandingPage/Homepage
