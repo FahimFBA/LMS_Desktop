@@ -106,6 +106,10 @@ This window gets displayed if the user do something wrong during the creation of
 
 ![student signup failed](./img/studentsignupfailed.png)
 
+- Student Course View
+
+https://github.com/FahimFBA/LMS_Desktop/assets/64195132/6cc338b8-5e07-4ffd-943a-042ffeb97f9c
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
