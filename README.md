@@ -110,6 +110,11 @@ This window gets displayed if the user do something wrong during the creation of
 
 https://github.com/FahimFBA/LMS_Desktop/assets/64195132/6cc338b8-5e07-4ffd-943a-042ffeb97f9c
 
+- Admin Handles Students
+
+https://github.com/FahimFBA/LMS_Desktop/assets/64195132/48281266-36c2-4a76-af8b-b4d5844db7f7
+
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
