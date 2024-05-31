@@ -82,6 +82,11 @@ https://github.com/FahimFBA/LMS_Desktop/assets/64195132/148df098-499e-47b6-bc29-
 
 https://github.com/FahimFBA/LMS_Desktop/assets/64195132/70c8b435-04bc-4e43-8442-9fd2a633acb5
 
+- Chat System (The teacher must need to start the server so that the students can chat among them. Teacher can see all the chat so that they are not cheating during the exams! The teacher can generate the event log as `.xlsx` file.) - ***TCP based Chat System has been applied here!***
+
+https://github.com/FahimFBA/LMS_Desktop/assets/64195132/daf16b3e-811d-4cf7-a29c-9874df23f1eb
+
+The `.xlsx` file generated in the above video is right [here](./eventLogs/eventLogs_2024-05-31-11-30-33.xlsx).
 
 ## Team Members
 
