@@ -100,6 +100,12 @@ This window gets displayed if the user's new account gets created successfully.
 https://github.com/FahimFBA/LMS_Desktop/assets/64195132/2a299a68-2f96-48e3-b6b1-2f140073848b
 
 
+- Student Signup Fail Window
+
+This window gets displayed if the user do something wrong during the creation of the account (i.e, The password does not match in the `Retype Password` section, etc.)
+
+![student signup failed](./img/studentsignupfailed.png)
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
