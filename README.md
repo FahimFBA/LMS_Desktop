@@ -19,10 +19,21 @@ A desktop application that lets the faculties, students and admin to interact wi
 ## Installation
 
 
+> [!NOTE] 
+> **For Server, `ChatServer.java`. For Client, `ChatClient.java`.**
+> 
+> VM option - `--module-path "C:\Program Files\Java\javafx-sdk-17.0.6\lib" --add-modules javafx.controls,javafx.fxml`
+> 
+> Or, use **Allow Multiple Instances** in VS Code like below. For it, run `ChatClient.java`. Go to `Run` > `Edit Configurations...` >  
+>
+> ![allow multiple instance](./img/allowmultipleinstance.png)
 
-**For Server, `ChatServer.java`. For Client, `ChatClient.java`.**
-
-** VM option - `--module-path "C:\Program Files\Java\javafx-sdk-17.0.6\lib" --add-modules javafx.controls,javafx.fxml`
+- Clone the repository `git clone https://github.com/FahimFBA/LMS_Desktop.git`
+- Open it in VS Code or IntelliJ IDEA. Recommending the IntelliJ IDEA.
+- Install all libraries from `lib` folder.
+- Import the database `sql` from `src/resources/database/student_signup.sql` to any client. I prefer MySQL Workbench. Alter its password to `1234` or `root`.
+- Run `src/main/java/com/lms/lmsdesktop/MainApplication.java` to launch the application.
+- Have fun!
 
 ## Screenshots
 
