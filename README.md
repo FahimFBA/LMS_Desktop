@@ -2,6 +2,8 @@
 
 A desktop application that lets the faculties, students and admin to interact with their privilege and responsibilities.
 
+A video demonstration is available [here](https://www.youtube.com/watch?v=S84QZHBzVUI).
+
 ## Features
 
 - Admin, Faculty & Student Login
