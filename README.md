@@ -77,6 +77,12 @@ https://github.com/FahimFBA/LMS_Desktop/assets/64195132/6fc0b8cf-65db-45d6-a54c-
 
 https://github.com/FahimFBA/LMS_Desktop/assets/64195132/148df098-499e-47b6-bc29-32fffdaf92a5
 
+
+- A nice standalone calculator integrated to LMS Desktop
+
+https://github.com/FahimFBA/LMS_Desktop/assets/64195132/70c8b435-04bc-4e43-8442-9fd2a633acb5
+
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
