@@ -58,6 +58,12 @@ A desktop application that lets the faculties, students and admin to interact wi
 
 ![faculty course view](./img/facultycourseview.png)
 
+- Faculty Course Content Update
+
+![update course content 1](./img/update1.png)
+
+![update course content 2](./img/update2.png)
+
 ## Team Members
 
 - [Md. Fahim Bin Amin](https://github.com/FahimFBA) - Team Leader
