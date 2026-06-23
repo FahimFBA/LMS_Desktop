@@ -2,13 +2,18 @@ name: Release
 
 on:
   push:
+    branches:
+      - master
     tags:
       - "v*"
+    paths:
+      - "CHANGELOG.md"
+      - ".github/workflows/release.yml"
   workflow_dispatch:
     inputs:
       tag:
-        description: "Existing release tag, for example v1.0.0"
-        required: true
+        description: "Release tag, for example v1.0.0. Leave empty to use the latest CHANGELOG.md version."
+        required: false
         type: string
 
 permissions:
@@ -31,10 +36,17 @@ jobs:
         run: |
           set -euo pipefail
 
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && -n "${{ inputs.tag }}" ]]; then
             tag="${{ inputs.tag }}"
-          else
+          elif [[ "${GITHUB_REF_TYPE}" == "tag" ]]; then
             tag="${GITHUB_REF_NAME}"
+          else
+            version="$(python3 -c 'import re; from pathlib import Path; changelog = Path("CHANGELOG.md").read_text(encoding="utf-8"); versions = [m.group(1) for m in re.finditer(r"^## \[([^\]]+)\](?:\s+-\s+.+)?\s*$", changelog, re.MULTILINE) if m.group(1).lower() != "unreleased"]; print(versions[0] if versions else "")')"
+            if [[ -z "$version" ]]; then
+              echo "CHANGELOG.md does not contain a released version section." >&2
+              exit 1
+            fi
+            tag="v${version}"
           fi
 
           if [[ ! "$tag" =~ ^v[0-9]+(\.[0-9]+){2}(-[0-9A-Za-z.-]+)?$ ]]; then
@@ -47,8 +59,9 @@ jobs:
           echo "version=$version" >> "$GITHUB_OUTPUT"
 
       - name: Extract changelog notes
-        shell: python
+        shell: bash
         run: |
+          python3 <<'PY'
           import os
           import re
           import sys
@@ -72,6 +85,7 @@ jobs:
               sys.exit(1)
 
           Path("release-notes.md").write_text(notes + os.linesep, encoding="utf-8")
+          PY
 
       - name: Set up JDK
         uses: actions/setup-java@v4
@@ -87,7 +101,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          if gh release view "${{ steps.release.outputs.tag }}" >/dev/null 2>&1; then
+            echo "Release ${{ steps.release.outputs.tag }} already exists."
+            exit 0
+          fi
+
           gh release create "${{ steps.release.outputs.tag }}" \
-            --verify-tag \
+            --target "${GITHUB_SHA}" \
             --title "LMSdesktop ${{ steps.release.outputs.version }}" \
             --notes-file release-notes.md
